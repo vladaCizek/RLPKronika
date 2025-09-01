@@ -12,6 +12,7 @@ This is a static website project documenting the history of Air Traffic Control 
 /
 ├── index.html                 # Main entry point (minimal HTML page)
 ├── navigation.txt            # Site navigation structure
+├── types.d.ts                # TypeScript type definitions for Bio and Licence interfaces
 ├── assets/
 │   ├── css/
 │   │   └── bulma.min.css    # Bulma CSS framework for styling
