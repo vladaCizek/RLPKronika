@@ -67,6 +67,61 @@
         margin-bottom: 0;
       }
 
+      /* Bio sections styling */
+      .bio-section {
+        margin-bottom: 1.25rem;
+        padding: 0.75rem;
+        background: #fafafa;
+        border-left: 3px solid #dbdbdb;
+        border-radius: 4px;
+      }
+
+      .bio-section:last-child {
+        margin-bottom: 0;
+      }
+
+      .bio-section-title {
+        margin-bottom: 0.5rem;
+        color: #363636;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.8rem;
+      }
+
+      .bio-section-content {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .bio-section-content p {
+        margin-bottom: 0.4rem;
+      }
+
+      .bio-section-content p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Different colors for different sections */
+      .bio-section.basic-info {
+        background: #f0f8ff;
+        border-left-color: #3273dc;
+      }
+
+      .bio-section.licences {
+        background: #f0fff4;
+        border-left-color: #48c774;
+      }
+
+      .bio-section.instruktor {
+        background: #fffbf0;
+        border-left-color: #ffdd57;
+      }
+
+      .bio-section.additional-info {
+        background: #fdf6ff;
+        border-left-color: #b86bff;
+      }
+
       @media (max-width: 768px) {
         .bio-card {
           flex-direction: column;
@@ -75,5 +130,18 @@
         
         .bio-image, .bio-placeholder {
           align-self: center;
+        }
+
+        .bio-section {
+          margin-bottom: 1rem;
+          padding: 0.6rem;
+        }
+
+        .bio-section-title {
+          font-size: 0.75rem;
+        }
+
+        .bio-section-content {
+          font-size: 0.85rem;
         }
       }
