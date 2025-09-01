@@ -1,7 +1,4 @@
-// BO/CDD List biographical data
-// Based on data/bo-cdd.md historical records
-
-export const bioData = [
+const bioData = [
   {
     name: "Türková Milada",
     birthDate: "3.6.1913",
@@ -9,10 +6,10 @@ export const bioData = [
     startDate: "1949",
     licenseBO: "1949",
     additionalInfo: [
-      "Začínala na Hrabůvce, v r. 1952 získala průkaz radiotelefonisty pro palubní vysílače."
+      "Začínala na Hrabůvce, v r. 1952 získala průkaz radiotelefonisty pro palubní vysílače.",
     ],
     departure: "1969 důchod",
-    image: "fotky/BO-CDD List/1_IMG_20250829_225144.jpg"
+    image: "fotky/BO-CDD List/1_IMG_20250829_225144.jpg",
   },
   {
     name: "Bílková Bedřiška",
@@ -21,10 +18,10 @@ export const bioData = [
     startDate: "1950",
     licenseBO: "1950",
     additionalInfo: [
-      "Začínala na Hrabůvce, v r. 1952 získala průkaz radiotelefonisty pro palubní vysílače."
+      "Začínala na Hrabůvce, v r. 1952 získala průkaz radiotelefonisty pro palubní vysílače.",
     ],
     departure: "1973 důchod",
-    image: "fotky/BO-CDD List/2_IMG_20250829_224040.jpg"
+    image: "fotky/BO-CDD List/2_IMG_20250829_224040.jpg",
   },
   {
     name: "Lyčková Jiřina",
@@ -32,14 +29,14 @@ export const bioData = [
     deathDate: "23.1.1987",
     startDate: "1960",
     licenseBO: "1960",
-    departure: "1979 důchod"
+    departure: "1979 důchod",
   },
   {
     name: "Oháňková Ludmila (nyní Tomková)",
     birthDate: "1938",
     startDate: "1961",
     licenseBO: "1961",
-    departure: "1963 na mateřskou dovolenou a již se nevrátila"
+    departure: "1963 na mateřskou dovolenou a již se nevrátila",
   },
   {
     name: "Surůvková Dagmar",
@@ -48,31 +45,29 @@ export const bioData = [
     startDate: "1.4.1961",
     licenseBO: "1.10.1961",
     departure: "červen 1996 důchod",
-    image: "fotky/BO-CDD List/3_IMG_20250829_224202.jpg"
+    image: "fotky/BO-CDD List/3_IMG_20250829_224202.jpg",
   },
   {
     name: "Šimková Vlasta (nyní Murasová)",
     birthDate: "1.3.1940",
     startDate: "19.9.1964",
     licenseBO: "1.12.1964",
-    departure: "červen 1998 důchod"
+    departure: "červen 1998 důchod",
   },
   {
     name: "Kslažková Anna",
     birthDate: "7.6.1940",
     startDate: "2.10.1967",
     licenseBO: "20.12.1967",
-    additionalInfo: [
-      "AO: 15.4.2004 ATIS"
-    ],
-    departure: "31.12.2006 důchod"
+    additionalInfo: ["AO: 15.4.2004 ATIS"],
+    departure: "31.12.2006 důchod",
   },
   {
     name: "Trnovcová Jana",
     birthDate: "1944",
     startDate: "1969",
     licenseBO: "1969",
-    departure: "1971 - odešla k ČSAD, kde pracovala jako referentka"
+    departure: "1971 - odešla k ČSAD, kde pracovala jako referentka",
   },
   {
     name: "Staňková Blanka",
@@ -80,8 +75,8 @@ export const bioData = [
     startDate: "16.4.1972",
     licenseBO: "6.6.1972",
     additionalInfo: [
-      "Přišla z výpravny na letišti v r. 1972 a byla propuštěna z organizačních důvodů v r. 1982, odešla k Vítkovickým stavbám a od r. 1997 v důchodu."
-    ]
+      "Přišla z výpravny na letišti v r. 1972 a byla propuštěna z organizačních důvodů v r. 1982, odešla k Vítkovickým stavbám a od r. 1997 v důchodu.",
+    ],
   },
   {
     name: "Kočvara Jiří",
@@ -90,8 +85,8 @@ export const bioData = [
     licenseBO: "26.8.1969",
     additionalInfo: [
       "Dozorci APN: 1969",
-      "Přišel z armády v r.1968 (pracoval na MTWR v Mošnově jako pomocník leteckého dispečera). V r. 1982 byl propuštěn z organizačních důvodů, odešel opět k armádě, kde pracoval jako občanský zaměstnanec - vedoucí vojenského skladu v Bělském Lese, později po zrušení posádky pracoval v chemičce v Hrušové od r. 2005 důchod."
-    ]
+      "Přišel z armády v r.1968 (pracoval na MTWR v Mošnově jako pomocník leteckého dispečera). V r. 1982 byl propuštěn z organizačních důvodů, odešel opět k armádě, kde pracoval jako občanský zaměstnanec - vedoucí vojenského skladu v Bělském Lese, později po zrušení posádky pracoval v chemičce v Hrušové od r. 2005 důchod.",
+    ],
   },
   {
     name: "Moravcová Kamila (dříve Mohylová)",
@@ -99,18 +94,16 @@ export const bioData = [
     startDate: "1.7.1987",
     licenseBO: "30.10.1987",
     additionalInfo: [
-      "V r. 1993 odchod na mateřskou dovolenou 1997 rozvázání pracovního poměru z důvodu prodloužení mateřské dovolené 11.9.2000 nastoupila zpět k ŘLP ČR do administrativy jako referent ISQMS."
-    ]
+      "V r. 1993 odchod na mateřskou dovolenou 1997 rozvázání pracovního poměru z důvodu prodloužení mateřské dovolené 11.9.2000 nastoupila zpět k ŘLP ČR do administrativy jako referent ISQMS.",
+    ],
   },
   {
     name: "Klásková Ludmila (dříve Malchárková)",
     birthDate: "17.3.1955",
     startDate: "19.8.1975",
     licenseBO: "28.6.1976",
-    additionalInfo: [
-      "AO: 15.4.2004"
-    ],
-    departure: "30.6.2016 důchod"
+    additionalInfo: ["AO: 15.4.2004"],
+    departure: "30.6.2016 důchod",
   },
   {
     name: "Malchárková Eva (dříve Foerchgottová)",
@@ -122,8 +115,8 @@ export const bioData = [
       "ASO: 4.5.2005",
       "Propuštěna z organizačních důvodů v r. 1982, pracovala pak v archivu a vrátila se zpět v r. 1990.",
       "TASO 14.6.2016",
-      "Výstavba 3/2018"
-    ]
+      "Výstavba 3/2018",
+    ],
   },
   {
     name: "Němcová Taťána (dříve Jastřembská)",
@@ -133,8 +126,8 @@ export const bioData = [
     additionalInfo: [
       "AO: 5.5.2004",
       "Přišla od AIR Ostrava kde pracovala jako stevardka.",
-      "TASO 4.6.2016"
-    ]
+      "TASO 4.6.2016",
+    ],
   },
   {
     name: "Mazumderová Irena",
@@ -144,8 +137,8 @@ export const bioData = [
     additionalInfo: [
       "AO: 14.4.2004",
       "ASO: 4.5.2005",
-      "Od 1.7. ADO LKPR"
-    ]
+      "Od 1.7. ADO LKPR",
+    ],
   },
   {
     name: "Hloušková Renata",
@@ -158,8 +151,8 @@ export const bioData = [
       "Instruktor ARO: 29.11.2006",
       "Administrátor systému: 2006",
       "TASO/1.6.2016 Clearance Delivery",
-      "Automatic System Operator D Analyst"
-    ]
+      "Automatic System Operator D Analyst",
+    ],
   },
   {
     name: "Holomková Šárka",
@@ -171,7 +164,7 @@ export const bioData = [
       "ASO: 12.4.2006",
       "2007 odchod na mateřskou dovolenou",
       "2013 návrat z mateřské dovolené, obnovení licence BO, poloviční úvazek spolu s B. Knoflíčkem, od roku 2014 plný úvazek",
-      "TASO/Sekretariát 1.6.2016"
-    ]
-  }
+      "TASO/Sekretariát 1.6.2016",
+    ],
+  },
 ];

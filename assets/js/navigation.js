@@ -21,7 +21,7 @@ function createNavigation(activePage = '') {
           <a class="navbar-item ${activePage === 'bo-cdd-list.html' ? 'is-active' : ''}" href="bo-cdd-list.html">BO/CDD</a>
           <a class="navbar-item ${activePage === 'ts.html' ? 'is-active' : ''}" href="ts.html">TS</a>
           <a class="navbar-item ${activePage === 'vedouci-rlp.html' ? 'is-active' : ''}" href="vedouci-rlp.html">Vedoucí ŘLP</a>
-          <a class="navbar-item ${activePage === 'vedouci-klmt.html' ? 'is-active' : ''}" href="vedouci-klmt.html">Vedoucí KLMT</a>
+          <a class="navbar-item ${activePage === 'vedouci-klmt.html' ? 'is-active' : ''}" href="vedouci-klmt.html">Vedoucí LKMT</a>
           <a class="navbar-item ${activePage === 'galerie.html' ? 'is-active' : ''}" href="galerie.html">Galerie</a>
         </div>
       </div>
