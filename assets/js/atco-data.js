@@ -22,7 +22,7 @@ const bioData = [
       { "BO": "1982" }
     ],
     info: "TWR LKPO, LKZA: 1984",
-    image: "fotky/ATCO List/1_IMG_20250829_225144.jpg",
+    image: "assets/images/atco/Picek.jpg",
     imageDescription: "Zdeněk Picek"
   },
   {
@@ -60,7 +60,7 @@ const bioData = [
     },
     instruktor: [],
     info: "TWR LKZA: 1984. Pracoval na letišti Hrabůvka na goniu, pak získal v Mošnově plnou řlp kvalifikaci, ale pracoval jen na TWR.",
-    image: "",
+    image: "assets/images/atco/Bruno.jpg",
     imageDescription: ""
   },
   {
@@ -85,7 +85,7 @@ const bioData = [
       { "BO": "1982" }
     ],
     info: "TWR LKPO: 1984",
-    image: "fotky/ATCO List/2_IMG_20250829_224040.jpg",
+    image: "assets/images/atco/Kachel 1.jpg",
     imageDescription: "Rudolf Kachel"
   },
   {
@@ -125,7 +125,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Pracoval krátce jako letecký dispečer na Mošnově, pak přešel na technický úsek a od r. 1962 byl vedoucím letecké zabezpečovací techniky na Mošnově.",
-    image: "fotky/ATCO List/3_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Janus.jpg",
     imageDescription: "Vlastimil Hudeček"
   },
   {
@@ -150,7 +150,7 @@ const bioData = [
       { "Instruktor": "21.12.1984" }
     ],
     info: "TWR LKPO, LKZA: 1984",
-    image: "",
+    image: "assets/images/atco/Sedláček.jpg",
     imageDescription: ""
   },
   {
@@ -176,7 +176,7 @@ const bioData = [
       { "BO": "1982" }
     ],
     info: "TWR LKPO, LKZA: 1984",
-    image: "",
+    image: "assets/images/atco/Janáček 3.jpg",
     imageDescription: ""
   },
   {
@@ -201,7 +201,7 @@ const bioData = [
       { "BO": "1982" }
     ],
     info: "TWR LKZA: 1984",
-    image: "fotky/ATCO List/4_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Pavel.jpg",
     imageDescription: "Jiří Pavel"
   },
   {
@@ -227,7 +227,7 @@ const bioData = [
       { "BO": "30.6.1996" }
     ],
     info: "TWR LKPO: 1984. Vedoucí stanoviště: 1960 - 1975",
-    image: "",
+    image: "assets/images/atco/Vyvial 2.jpg",
     imageDescription: ""
   },
   {
@@ -251,7 +251,7 @@ const bioData = [
       { "SC": "30.10.1979 předtím výkon bez kvalifikační zkoušky" }
     ],
     info: "TWR LKPO, LKZA: 1984. Vedoucí stanoviště: 1.3.1975 – 31.3.1992",
-    image: "",
+    image: "assets/images/atco/Šindler 1.jpg",
     imageDescription: ""
   },
   {
@@ -268,7 +268,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Odešel během zácviku v r. 1966 do LKPO a LKHO, kde získal kvalifikaci TWR/APP a střídavě pracoval na obou letištích. Od 1.1.1995 odešel na SAR Praha.",
-    image: "fotky/ATCO List/5_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Ševčík 2.jpg",
     imageDescription: "Jan Pečenka"
   },
   {
@@ -289,7 +289,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Přišel z armády jako vojenský pilot – stíhač a odešel v r. 1977 do Air Vítkovice jako pilot. Od r. 1993 Air Ostrava, 1996 IGEC, v r. 1997 důchod, ale pracoval dále v Air Ostrava a od r. 2000 Job Air, Let's Fly.",
-    image: "",
+    image: "assets/images/atco/Trojčínský.jpg",
     imageDescription: ""
   },
   {
@@ -310,7 +310,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Přišel z Kunovic v r. 1967. Odešel po dohodě v r. 1971 do Vodochod. Od r. 1975 náčelník letiště Aero Vodochody, od r. 1980 – 1998 radiodůstojník Československé (později České) námořní plavby.",
-    image: "",
+    image: "assets/images/atco/Jež.jpg",
     imageDescription: ""
   },
   {
@@ -331,7 +331,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Odešel v r. 1970 k ČSA jako navigátor na IL-62.",
-    image: "fotky/ATCO List/6_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Ševčík 2.jpg",
     imageDescription: "Jiří Ševčík"
   },
   {
@@ -352,7 +352,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Odešel v r. 1972 k ČSA, 1.7.1975 získal licenci dopravního pilota. Odešel do důchodu v r. 2006 jako kapitán na B-737.",
-    image: "",
+    image: "assets/images/atco/Brázda.jpg",
     imageDescription: ""
   },
   {
@@ -373,7 +373,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Před odchodem pracoval jako asistent ředitele letiště Mošnov (1970-1973). Odešel v listopadu 1973 do Hradce Králové do dopravního podniku, kde později pracoval jako ředitel.",
-    image: "",
+    image: "assets/images/atco/Šmíd 1.jpg",
     imageDescription: ""
   },
   {
@@ -400,7 +400,7 @@ const bioData = [
       { "BO": "17.3.1982" }
     ],
     info: "TWR LKPO, LKZA: 1984. Vedoucí stanoviště: 1.1.1994 – 31.12.2008. V důchodu pokračoval v práci pro ŘLP NA vyhodnocování systému P3D k použití jako pozemního radaru, zaměstnán pod DPLR",
-    image: "fotky/ATCO List/7_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Ksiażek portrét.jpg",
     imageDescription: "Pavel Ksiażek"
   },
   {
@@ -421,7 +421,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Od r.1970 – 1973 asistent ředitele letiště Mošnov a od r. 1974 – 1992 vedoucí ZLS letiště Ostrava, pak od 1.12.1992 jako vojenský řídící letového provozu v Mošnově, od r. 1993 v Přerově a od r. 1994 jako vedoucí vojenského stanoviště služby řízení letového provozu v Přerově, od r. 2004 v důchodu, ale dále pracoval jako občanský zaměstnanec - instruktor na vojenské LŠ v Ruzyni. Jeho syn Roman pracuje u ŘLP Ostrava jako technik",
-    image: "",
+    image: "assets/images/atco/Škrabálek.jpg",
     imageDescription: ""
   },
   {
@@ -445,7 +445,7 @@ const bioData = [
       { "BO": "1982" }
     ],
     info: "TWR LKPO, LKZA: 1984. Dozorčí APN: 21.10.1967. Odešel po dohodě v r. 2000",
-    image: "fotky/ATCO List/8_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Holenda.jpg",
     imageDescription: "Jan Holenda"
   },
   {
@@ -498,7 +498,7 @@ const bioData = [
       { "BO": "10.6.2003" }
     ],
     info: "TWR LKPO, LKZA: 1984. Dozorčí APN: 17.1.1973. Aktivní ŘLP licence ukončena v prosinci 2010, ale poté pokračuje v práci na ARO. Od dubna 2014 nastoupil na AFIS Přerov",
-    image: "",
+    image: "assets/images/atco/Knoflíček portrét.jpg",
     imageDescription: ""
   },
   {
@@ -523,7 +523,7 @@ const bioData = [
       { "BO": "1982" }
     ],
     info: "TWR LKPO, LKZA: 1984. Dozorčí APN: 31.1.1973. Ze zdravotních důvodů přešel od 1.1.2000 na divizi DPLR, Praha. 1.4.2014 nastoupil jako pseudopilot na simulátor",
-    image: "fotky/ATCO List/9_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Dohnal.jpg",
     imageDescription: "Milan Dohnal"
   },
   {
@@ -546,7 +546,7 @@ const bioData = [
       { "SC": "24.1.2006" }
     ],
     info: "Nástup: 2.4.1973 / 1.6.1992. Dozorčí APN: 1.11.1974. Vedoucí regionální odborové jednotky CZATCA. 1992-2000 zástupce pro regionální letiště ve výkonné radě CZATCA. Propuštěn z organizačních důvodů v r. 1982 - přešel jako řlp nejprve do Vodochod, pak do Otrokovic a v r. 1992 se vrátil zpět do Ostravy. Na letišti působí dále jako pilot u El Montex a Aeroklubu, Od 2014 pseudopilot LKMT. Taktéž kapitán pro jachty",
-    image: "",
+    image: "assets/images/atco/Kočvara portrét.jpg",
     imageDescription: ""
   },
   {
@@ -574,7 +574,7 @@ const bioData = [
       { "BO": "2.6.1982" }
     ],
     info: "Přišel ze Sliače v r. 1989 a v r. 1992 přešel do funkce jako vedoucí ZLS střediska Ostrava později vedoucí SLNS Ostrava. V roce 2010 při restrukturalizaci stanoviště DRSL se stal metodikem regionálních letišť",
-    image: "fotky/ATCO List/10_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Kubík portrét.jpg",
     imageDescription: "Radovan Kubík"
   },
   {
@@ -594,7 +594,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Z organizačních důvodů propuštěn v r.1982, odešel k armádě a jako vojenský řlp pracoval nejprve v Ostravě, pak v Brně na MTWR, později pracoval v zahraničních misích armády (Afrika)",
-    image: "",
+    image: "assets/images/atco/Kocian.jpg",
     imageDescription: ""
   },
   {
@@ -621,7 +621,7 @@ const bioData = [
       { "OJTI": "25.7.2006" }
     ],
     info: "Nástup:1.5. 1977 / 1.5.2001. Předtím jako řlp v Holešově, Otrokovicích a Kunovicích, přišel do Ostravy v r. 2001",
-    image: "",
+    image: "assets/images/atco/Záruba portrét.jpg",
     imageDescription: ""
   },
   {
@@ -646,7 +646,7 @@ const bioData = [
       { "BO": "29.3.1989" }
     ],
     info: "Vedoucí stanoviště: 1.4.1992 – 1993. Odešel po dohodě v r. 1999 na APP/TWR Praha",
-    image: "fotky/ATCO List/11_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Jurasz.jpg",
     imageDescription: "Jiří Sekyra"
   },
   {
@@ -717,7 +717,7 @@ const bioData = [
       { "OJTI": "3.3.2000" }
     ],
     info: "Nástup: 1.9.1987 / 1.3.1993. Odešel během zácviku v r. 1988 a vrátil se zpět v r. 1993",
-    image: "fotky/ATCO List/12_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Stoklasa portrét.jpg",
     imageDescription: "Rostislav Stoklasa"
   },
   {
@@ -742,7 +742,7 @@ const bioData = [
       { "Instruktor": "26.11.2003" }
     ],
     info: "Administrátor systému: 1997. Od ledna 2009 vedoucí stanoviště. 1.6.2016 náměstek vedoucí DRSL (Ostrava)",
-    image: "",
+    image: "assets/images/atco/Proske.jpg",
     imageDescription: ""
   },
   {
@@ -791,7 +791,7 @@ const bioData = [
       { "OJTI": "květen 2010" }
     ],
     info: "",
-    image: "fotky/ATCO List/13_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Friedl portrét.jpg",
     imageDescription: "Petr Friedl"
   },
   {
@@ -816,7 +816,7 @@ const bioData = [
       { "Instruktor": "2/2009" }
     ],
     info: "Člen výkonné rady CZATCA za regionální letiště 2010-2014. Pilot kluzáků, PPL",
-    image: "",
+    image: "assets/images/atco/Stryk portret.jpg",
     imageDescription: ""
   },
   {
@@ -859,7 +859,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Ukončený v říjnu 2010, protože odešel na stanoviště APP-TWR Praha, kde ovšem neukončil výcvik. V roce 2011 nastoupil na UCL. Poté Vodochody řídící pak DHL. Distance výuka umbo školník",
-    image: "fotky/ATCO List/14_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Lány portrét.jpg",
     imageDescription: "Jan Lány"
   },
   {
@@ -879,7 +879,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Nástup 1.2.2004 pro ACC Praha, konec 2005, poté lektor na Letecké škole, návrat do výcviku 1.6.2007 pro TWR/APP LKMT. Vedoucí LWS LKMT, 1.6.2016 vedoucí výcviku ckmt",
-    image: "",
+    image: "assets/images/atco/Vojna portret.jpg",
     imageDescription: ""
   },
   {
@@ -928,7 +928,7 @@ const bioData = [
       { "ASAE SeOC": "31.1.21" }
     ],
     info: "",
-    image: "fotky/ATCO List/15_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Kožušník Portrét.jpg",
     imageDescription: "Martin Klumpler"
   },
   {
@@ -968,7 +968,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Nástup 1.2.2005 pro ACC Praha, konec 2006, návrat do výcviku 1.6.2007 pro TWR/APP LKMT",
-    image: "",
+    image: "assets/images/atco/Nahlovsky portret.jpg",
     imageDescription: ""
   },
   {
@@ -985,7 +985,7 @@ const bioData = [
     },
     instruktor: [],
     info: "V únoru 2009 výcvik ukončen, nezískal licenci LKMT. Od 10.8.2009 nastoupil do výcviku v Kunovicích, kde získal licenci 11.2.2010. Od 1.5.2012 je vedoucím stanoviště LKKU",
-    image: "fotky/ATCO List/16_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Trčka.jpg",
     imageDescription: "Martin Břuska"
   },
   {
@@ -1005,7 +1005,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Od 2007 pilot ULL. 2010 se přestěhoval do samotné blízkosti letiště, Petřvaldu. Pilot ULL, PPL a školí se na IFR. 12/19 výcvik na Lou ACC 1.11.19",
-    image: "",
+    image: "assets/images/atco/Poledník portrét.jpg",
     imageDescription: ""
   },
   {
@@ -1047,7 +1047,7 @@ const bioData = [
       { "OP/GMDSS": "1.9.19" }
     ],
     info: "1.2.2019 CZATCA ěšot",
-    image: "fotky/ATCO List/17_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Lakva.jpg",
     imageDescription: "Petr Lakva"
   },
   {
@@ -1087,7 +1087,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Nástup 1.9.2012 pro ACC, později APP/TWR LKMT. V zácviku na stanovišti od 1.7.2015",
-    image: "fotky/ATCO List/18_IMG_20250829_224202.jpg",
+    image: "assets/images/atco/Plánička.jpg",
     imageDescription: "Petr Takač"
   },
   {
