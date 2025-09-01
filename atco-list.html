@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bulma.min.css" />
+    <link rel="stylesheet" href="assets/css/bio.css" />
+    <link rel="stylesheet" href="assets/css/typography.css" />
+    <title>ATCO List - Řízení Letového Provozu Ostrava</title>
+  </head>
+  <body>
+    <div id="navigation" data-page="atco-list.html" data-theme="dark"></div>
+
+    <section class="section">
+      <div class="container">
+        <div class="content">
+          <h1 class="title is-size-1 has-text-weight-bold">ATCO List</h1>
+          <p class="subtitle is-size-4 has-text-weight-medium">Seznam řídících letového provozu (Air Traffic Control Officers) působících na letišti Ostrava.</p>
+        </div>
+        
+        <div id="bio-list">
+          <!-- Bio components will be inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/navigation.js"></script>
+    <script>
+      // Bio component class
+      class BioComponent {
+        constructor(data) {
+          this.data = data;
+        }
+
+        render() {
+          const bioCard = document.createElement('div');
+          bioCard.className = 'bio-card';
+
+          // Create image element with fallback
+          const imageContainer = document.createElement('div');
+          
+          if (this.data.image) {
+            const img = document.createElement('img');
+            img.src = this.data.image;
+            img.alt = this.data.name;
+            img.className = 'bio-image';
+            
+            // Create placeholder for fallback
+            const placeholder = document.createElement('div');
+            placeholder.className = 'bio-placeholder';
+            placeholder.innerHTML = '👤';
+            placeholder.style.display = 'none';
+            
+            // Handle image load error
+            img.onerror = () => {
+              img.style.display = 'none';
+              placeholder.style.display = 'flex';
+            };
+            
+            imageContainer.appendChild(img);
+            imageContainer.appendChild(placeholder);
+          } else {
+            // Show placeholder if no image provided
+            const placeholder = document.createElement('div');
+            placeholder.className = 'bio-placeholder';
+            placeholder.innerHTML = '👤';
+            imageContainer.appendChild(placeholder);
+          }
+
+          // Create content
+          const bioContent = document.createElement('div');
+          bioContent.className = 'bio-content';
+          
+          bioContent.innerHTML = `
+            <h3 class="bio-name is-size-4 has-text-weight-semibold">${this.data.name}</h3>
+            <div class="bio-dates is-size-6 has-text-weight-medium">${this.formatDates()}</div>
+            <div class="bio-details is-size-6">
+              ${this.formatDetails()}
+            </div>
+          `;
+
+          bioCard.appendChild(imageContainer);
+          bioCard.appendChild(bioContent);
+          
+          return bioCard;
+        }
+
+        formatDates() {
+          let dates = '';
+          if (this.data.birthDate) {
+            dates += `*${this.data.birthDate}`;
+          }
+          if (this.data.deathDate) {
+            dates += ` +${this.data.deathDate}`;
+          }
+          return dates;
+        }
+
+        formatDetails() {
+          let details = '';
+          
+          if (this.data.startDate) {
+            details += `<p><span class="has-text-weight-semibold">Nástup:</span> ${this.data.startDate}</p>`;
+          }
+          
+          if (this.data.licenseTWR) {
+            details += `<p><span class="has-text-weight-semibold">Licence TWR:</span> ${this.data.licenseTWR}</p>`;
+          }
+          
+          if (this.data.licenseAPP) {
+            details += `<p><span class="has-text-weight-semibold">Licence APP:</span> ${this.data.licenseAPP}</p>`;
+          }
+          
+          if (this.data.radar) {
+            details += `<p><span class="has-text-weight-semibold">Radar:</span> ${this.data.radar}</p>`;
+          }
+          
+          if (this.data.par) {
+            details += `<p><span class="has-text-weight-semibold">PAR:</span> ${this.data.par}</p>`;
+          }
+          
+          if (this.data.additionalInfo && this.data.additionalInfo.length > 0) {
+            this.data.additionalInfo.forEach(info => {
+              details += `<p class="has-text-weight-normal">${info}</p>`;
+            });
+          }
+          
+          if (this.data.departure) {
+            details += `<p><span class="has-text-weight-semibold">Odchod:</span> ${this.data.departure}</p>`;
+          }
+
+          return details;
+        }
+      }
+
+      // ATCO personnel data
+      const bioData = [
+        {
+          name: "Zdeněk Picek",
+          birthDate: "16.8.1925",
+          deathDate: "†",
+          startDate: "18.5.1959",
+          licenseTWR: "28.7.1960",
+          licenseAPP: "28.7.1960",
+          radar: "14.10.1965",
+          par: "14.10.1965",
+          additionalInfo: [
+            "TWR LKPO, LKZA: 1984",
+            "SC: 1960 bez kvalifikační zkoušky",
+            "BO: 1982"
+          ],
+          departure: "1985 důchod",
+          image: "fotky/ATCO List/1_IMG_20250829_225144.jpg",
+        },
+        {
+          name: "Richard Pflegr",
+          birthDate: "1928",
+          startDate: "1958",
+          licenseTWR: "nil",
+          additionalInfo: [
+            "Pracoval v zácviku na Hrabůvce, pak v Mošnově, neudělal 3x zkoušky a odešel v r. 1962."
+          ],
+          departure: "1962"
+        },
+        {
+          name: "Bruno Mieszczak",
+          birthDate: "28.6.1928",
+          deathDate: "1992",
+          startDate: "17.8.1953",
+          licenseTWR: "12.4.1962",
+          licenseAPP: "12.4.1962",
+          radar: "22.9.1967",
+          additionalInfo: [
+            "TWR LKZA: 1984",
+            "Pracoval na letišti Hrabůvka na goniu, pak získal v Mošnově plnou řlp kvalifikaci, ale pracoval jen na TWR."
+          ]
+        },
+        {
+          name: "Rudolf Kachel",
+          birthDate: "17.4.1929",
+          startDate: "1.4.1962",
+          licenseTWR: "7.12.1964",
+          licenseAPP: "7.12.1964",
+          radar: "22.9.1967",
+          par: "14.4.1975",
+          additionalInfo: [
+            "TWR LKPO: 1984",
+            "SC: 1964 bez kvalifikační zkoušky",
+            "BO: 1982"
+          ],
+          departure: "1989 důchod",
+          image: "fotky/ATCO List/2_IMG_20250829_224040.jpg"
+        },
+        {
+          name: "Janus Oldřich",
+          birthDate: "16.10.1931",
+          startDate: "1957",
+          licenseTWR: "1.10.1958",
+          licenseAPP: "1.10.1958",
+          radar: "nil",
+          additionalInfo: [
+            "Pracoval jako jeden z prvních licencovaných leteckých dispečerů na Hrabůvce a v Mošnově až do r.1964 a současně od r.1960 jako provozní náměstek náčelníka letiště.",
+            "V r. 1970 pracoval krátce jako ředitel letiště Mošnov, a od r. 1970 náměstek ředitele ČSSDL a ředitel letiště Praha."
+          ],
+          departure: "1998 důchod"
+        },
+        {
+          name: "Vlastimil Hudeček",
+          birthDate: "1.3.1932",
+          deathDate: "duben 2009",
+          startDate: "1960",
+          licenseTWR: "9.2.1961",
+          licenseAPP: "9.2.1961",
+          radar: "nil",
+          additionalInfo: [
+            "Pracoval krátce jako letecký dispečer na Mošnově, pak přešel na technický úsek a od r. 1962 byl vedoucím letecké zabezpečovací techniky na Mošnově."
+          ],
+          departure: "1965",
+          image: "fotky/ATCO List/3_IMG_20250829_224202.jpg"
+        },
+        {
+          name: "Ladislav Sedláček",
+          birthDate: "2.4.1932",
+          deathDate: "21.1.2008",
+          startDate: "1959",
+          licenseTWR: "1960",
+          licenseAPP: "1960",
+          radar: "14.10.1965",
+          par: "14.10.1965",
+          additionalInfo: [
+            "TWR LKPO, LKZA: 1984",
+            "SC: 1960 bez kvalifikační zkoušky",
+            "Instruktor: 21.12.1984"
+          ],
+          departure: "1992 důchod"
+        },
+        {
+          name: "Lumír Janáček",
+          birthDate: "19.5.1934",
+          deathDate: "říjen 2013",
+          startDate: "16.9.1959",
+          licenseTWR: "9.2.1961",
+          licenseAPP: "9.2.1961",
+          radar: "14.10.1965",
+          par: "14.10.1965",
+          additionalInfo: [
+            "TWR/APP LKHO: 7.1.1972",
+            "TWR LKPO, LKZA: 1984",
+            "SC: 1961 bez kvalifikační zkoušky",
+            "BO: 1982"
+          ],
+          departure: "1994 důchod"
+        },
+        {
+          name: "Jiří Pavel",
+          birthDate: "12.3.1935",
+          deathDate: "23.2.1997",
+          startDate: "1.7.1961",
+          licenseTWR: "20.11.1963",
+          licenseAPP: "20.11.1963",
+          radar: "22.9.1967",
+          par: "21.1.1969",
+          additionalInfo: [
+            "TWR LKZA: 1984",
+            "SC: 30.10.1979 předtím výkon bez kvalifikační zkoušky",
+            "BO: 1982"
+          ],
+          departure: "1995 důchod",
+          image: "fotky/ATCO List/4_IMG_20250829_224202.jpg"
+        },
+        {
+          name: "Oldřich Vyvial",
+          birthDate: "22.2.1936",
+          startDate: "2.1.1958",
+          licenseTWR: "1.10.1958",
+          licenseAPP: "1.10.1958",
+          radar: "14.10.1965",
+          par: "14.10.1965",
+          additionalInfo: [
+            "TWR LKPO: 1984",
+            "SC: 30.10.1979 předtím bez kvalifikační zkoušky",
+            "Instruktor: 24.5.1983",
+            "BO: 30.6.1996",
+            "Vedoucí stanoviště: 1960 - 1975"
+          ],
+          departure: "2000 důchod"
+        },
+        {
+          name: "František Šindler",
+          birthDate: "17.9.1936",
+          deathDate: "31.12.2016",
+          startDate: "1.6.1962",
+          licenseTWR: "12.4.1965",
+          licenseAPP: "12.4.1965",
+          radar: "22.9.1967",
+          par: "21.1.1969",
+          additionalInfo: [
+            "TWR LKPO, LKZA: 1984",
+            "SC: 30.10.1979 předtím výkon bez kvalifikační zkoušky",
+            "Vedoucí stanoviště: 1.3.1975 – 31.3.1992"
+          ],
+          departure: "1.1.1997 důchod"
+        },
+        {
+          name: "Jan Pečenka",
+          birthDate: "5.6.1938",
+          startDate: "14.9.1964",
+          additionalInfo: [
+            "Odešel během zácviku v r. 1966 do LKPO a LKHO, kde získal kvalifikaci TWR/APP a střídavě pracoval na obou letištích.",
+            "Od 1.1.1995 odešel na SAR Praha."
+          ],
+          departure: "1966",
+          image: "fotky/ATCO List/5_IMG_20250829_224202.jpg"
+        },
+        {
+          name: "Bohumír Trojčínský",
+          birthDate: "23.3.1939",
+          deathDate: "4/2021",
+          startDate: "říjen 1971",
+          licenseTWR: "1972",
+          licenseAPP: "1972",
+          radar: "1973",
+          additionalInfo: [
+            "Přišel z armády jako vojenský pilot – stíhač a odešel v r. 1977 do Air Vítkovice jako pilot.",
+            "Od r. 1993 Air Ostrava, 1996 IGEC, v r. 1997 důchod, ale pracoval dále v Air Ostrava a od r. 2000 Job Air, Let's Fly."
+          ],
+          departure: "1977"
+        },
+        {
+          name: "František Jež",
+          birthDate: "25.9.1939",
+          deathDate: "17.6.2009",
+          startDate: "1967",
+          licenseTWR: "1968",
+          licenseAPP: "1968",
+          radar: "1969",
+          additionalInfo: [
+            "Přišel z Kunovic v r. 1967. Odešel po dohodě v r. 1971 do Vodochod.",
+            "Od r. 1975 náčelník letiště Aero Vodochody, od r. 1980 – 1998 radiodůstojník Československé (později České) námořní plavby."
+          ],
+          departure: "1971"
+        },
+        {
+          name: "Jiří Ševčík",
+          birthDate: "1941",
+          startDate: "září 1964",
+          licenseTWR: "2.11.1965",
+          licenseAPP: "2.11.1965",
+          radar: "22.9.1967",
+          additionalInfo: [
+            "Odešel v r. 1970 k ČSA jako navigátor na IL-62."
+          ],
+          departure: "1970",
+          image: "fotky/ATCO List/6_IMG_20250829_224202.jpg"
+        },
+        {
+          name: "Josef Brázda",
+          birthDate: "15.6.1943",
+          startDate: "září 1964",
+          licenseTWR: "červen 1966",
+          licenseAPP: "červen 1966",
+          radar: "22.9.1967",
+          additionalInfo: [
+            "Odešel v r. 1972 k ČSA, 1.7.1975 získal licenci dopravního pilota.",
+            "Odešel do důchodu v r. 2006 jako kapitán na B-737."
+          ],
+          departure: "1972"
+        },
+        {
+          name: "Ivan Šmíd",
+          birthDate: "25.6.1943",
+          startDate: "19.1.1967",
+          licenseTWR: "9.1.1969",
+          licenseAPP: "9.1.1969",
+          radar: "1970",
+          additionalInfo: [
+            "Před odchodem pracoval jako asistent ředitele letiště Mošnov (1970-1973).",
+            "Odešel v listopadu 1973 do Hradce Králové do dopravního podniku, kde později pracoval jako ředitel."
+          ],
+          departure: "1973"
+        }
+      ];
+
+      // Render bio components when page loads
+      function renderBioList() {
+        const bioListContainer = document.getElementById('bio-list');
+        
+        bioData.forEach(data => {
+          const bio = new BioComponent(data);
+          bioListContainer.appendChild(bio.render());
+        });
+      }
+
+      // Initialize when page loads
+      document.addEventListener('DOMContentLoaded', renderBioList);
+    </script>
+  </body>
+</html>

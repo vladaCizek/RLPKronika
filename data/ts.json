@@ -1,0 +1,186 @@
+{
+  "header": "Kde bychom byli bez našich techniků, kteří se nám starají o funkčnost stanoviště",
+  "subtitle": "Řazení podle nástupů k podniku",
+  "personnel": [
+    {
+      "name": "VEDOUCÍ",
+      "isHeader": true
+    },
+    {
+      "name": "Hudeček Vlastimil",
+      "details": "1960 - 1965 - vedoucí ZLT"
+    },
+    {
+      "name": "Novák Vlastimil",
+      "details": "19xx - 1991 - vedoucí ZLT"
+    },
+    {
+      "name": "Plánička Pavel, ing.",
+      "details": "1983 - dosud - vedoucí ZLT Současně i instruktor"
+    },
+    {
+      "name": "PERSONÁL",
+      "isHeader": true
+    },
+    {
+      "name": "Lukáš Ladislav",
+      "details": ""
+    },
+    {
+      "name": "Zabloudil Valerián",
+      "details": ""
+    },
+    {
+      "name": "Murlinger Karel",
+      "details": ""
+    },
+    {
+      "name": "Kužel Milan, ing.",
+      "details": ""
+    },
+    {
+      "name": "Čermák",
+      "details": ""
+    },
+    {
+      "name": "Hovadík Oldřich",
+      "details": ""
+    },
+    {
+      "name": "Petřík Miroslav",
+      "details": ""
+    },
+    {
+      "name": "Musálek Václav",
+      "details": ""
+    },
+    {
+      "name": "Fišer Pavel st.",
+      "details": ""
+    },
+    {
+      "name": "Adámek Petr",
+      "details": ""
+    },
+    {
+      "name": "Sadílek Aleš",
+      "details": ""
+    },
+    {
+      "name": "Lička Jan",
+      "details": ""
+    },
+    {
+      "name": "Čechák Pavel",
+      "details": ""
+    },
+    {
+      "name": "Karel Jan",
+      "details": ""
+    },
+    {
+      "name": "Sýkora Břetislav",
+      "details": ""
+    },
+    {
+      "name": "Kantor Jiří",
+      "details": ""
+    },
+    {
+      "name": "Holub Bedřich",
+      "details": ""
+    },
+    {
+      "name": "Rolčík Igor",
+      "details": ""
+    },
+    {
+      "name": "Macháček Jan, ing.",
+      "details": ""
+    },
+    {
+      "name": "Pauček Dušan, ing.",
+      "details": ""
+    },
+    {
+      "name": "Němčík Ladislav",
+      "details": ""
+    },
+    {
+      "name": "Ussarz Arnošt",
+      "details": ""
+    },
+    {
+      "name": "Stašek Jaroslav",
+      "details": ""
+    },
+    {
+      "name": "Zikl Petr",
+      "details": ""
+    },
+    {
+      "name": "Glasov Anatolij, ing.",
+      "details": ""
+    },
+    {
+      "name": "Novák Jan",
+      "details": ""
+    },
+    {
+      "name": "Janáček Lumír ml.",
+      "details": ""
+    },
+    {
+      "name": "Smít Jiří",
+      "details": ""
+    },
+    {
+      "name": "Suder Miroslav",
+      "details": ""
+    },
+    {
+      "name": "Zinek Jiří",
+      "details": ""
+    },
+    {
+      "name": "Liewehr Jiří",
+      "details": "AFTN, PM3000, instruktor"
+    },
+    {
+      "name": "Chmel Lubomír",
+      "details": "CMOS, AMS, RCOM, instruktor"
+    },
+    {
+      "name": "Kušnier Stefan",
+      "details": "TAR"
+    },
+    {
+      "name": "Škrabálek Roman",
+      "details": "P3D"
+    },
+    {
+      "name": "Tomášek Oldřich",
+      "details": "Rozvody"
+    },
+    {
+      "name": "Tomášek Pavel",
+      "details": ""
+    },
+    {
+      "name": "Gondal Dušan",
+      "details": ""
+    },
+    {
+      "name": "Frank Karel",
+      "details": ""
+    },
+    {
+      "name": "Chmel Michal",
+      "details": "TAR"
+    },
+    {
+      "name": "Fišer Pavel ml.",
+      "details": "Rozvody, VCS, RRS, instruktor"
+    }
+  ]
+}

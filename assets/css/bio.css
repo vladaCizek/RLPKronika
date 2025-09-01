@@ -1,0 +1,79 @@
+ .bio-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+      }
+
+      .bio-image {
+        width: 120px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 6px;
+        flex-shrink: 0;
+      }
+
+      .bio-placeholder {
+        width: 120px;
+        height: 150px;
+        background: #f5f5f5;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #999;
+        font-size: 2rem;
+        flex-shrink: 0;
+        border: 2px dashed #ddd;
+      }
+
+      .bio-content {
+        flex: 1;
+      }
+
+      .bio-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #363636;
+        margin-bottom: 0.5rem;
+      }
+
+      .bio-dates {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+
+      .bio-details {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #4a4a4a;
+      }
+
+      .bio-details strong {
+        color: #363636;
+      }
+
+      .bio-details p {
+        margin-bottom: 0.5rem;
+      }
+
+      .bio-details p:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 768px) {
+        .bio-card {
+          flex-direction: column;
+          text-align: center;
+        }
+        
+        .bio-image, .bio-placeholder {
+          align-self: center;
+        }
+      }

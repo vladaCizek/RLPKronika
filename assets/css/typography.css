@@ -1,0 +1,100 @@
+/* Enhanced Typography for ŘLP Ostrava Website */
+
+/* Font loading optimization with Inter Google Font */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+/* Enhanced readability for main content */
+.content {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Improved heading hierarchy */
+.title.is-size-1 {
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.subtitle.is-size-4 {
+  line-height: 1.4;
+  color: #666;
+}
+
+/* Bio component typography enhancements */
+.bio-name {
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.bio-dates {
+  font-variant-numeric: tabular-nums;
+}
+
+.bio-details {
+  line-height: 1.6;
+}
+
+.bio-details p {
+  margin-bottom: 0.75rem;
+}
+
+/* Ensure good contrast for semibold text */
+.has-text-weight-semibold {
+  color: #363636;
+}
+
+/* Enhanced focus states for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #3273dc;
+  outline-offset: 2px;
+}
+
+/* Small text improvements */
+.is-size-6 {
+  line-height: 1.5;
+}
+
+/* Better spacing for paragraphs in content areas */
+.content p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+/* Inter font weight optimizations */
+.has-text-weight-light {
+  font-weight: 300;
+}
+
+.has-text-weight-normal {
+  font-weight: 400;
+}
+
+.has-text-weight-medium {
+  font-weight: 500;
+}
+
+.has-text-weight-semibold {
+  font-weight: 600;
+}
+
+.has-text-weight-bold {
+  font-weight: 700;
+}
+
+/* Inter-specific optimizations for better readability */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "liga" 1, "kern" 1, "calt" 1, "ss01" 1;
+}
+
+/* Optimize Inter for small sizes */
+.is-size-7, .is-size-6 {
+  font-feature-settings: "liga" 1, "kern" 1, "calt" 1, "tnum" 1;
+}
