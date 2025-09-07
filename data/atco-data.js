@@ -105,8 +105,8 @@ const bioData = [
     },
     instruktor: [],
     info: "Pracoval jako jeden z prvních licencovaných leteckých dispečerů na Hrabůvce a v Mošnově až do r.1964 a současně od r.1960 jako provozní náměstek náčelníka letiště. V r. 1970 pracoval krátce jako ředitel letiště Mošnov, a od r. 1970 náměstek ředitele ČSSDL a ředitel letiště Praha.",
-    image: "",
-    imageDescription: ""
+    image: "assets/images/atco/Janus.jpg",
+    imageDescription: "Janus Oldřich"
   },
   {
     bio: {
@@ -125,8 +125,8 @@ const bioData = [
     },
     instruktor: [],
     info: "Pracoval krátce jako letecký dispečer na Mošnově, pak přešel na technický úsek a od r. 1962 byl vedoucím letecké zabezpečovací techniky na Mošnově.",
-    image: "assets/images/atco/Janus.jpg",
-    imageDescription: "Vlastimil Hudeček"
+    image: "",
+    imageDescription: ""
   },
   {
     bio: {
@@ -268,7 +268,7 @@ const bioData = [
     },
     instruktor: [],
     info: "Odešel během zácviku v r. 1966 do LKPO a LKHO, kde získal kvalifikaci TWR/APP a střídavě pracoval na obou letištích. Od 1.1.1995 odešel na SAR Praha.",
-    image: "assets/images/atco/Ševčík 2.jpg",
+    image: "assets/images/atco/Pečenka Jan.jpg",
     imageDescription: "Jan Pečenka"
   },
   {
@@ -289,8 +289,8 @@ const bioData = [
     },
     instruktor: [],
     info: "Přišel z armády jako vojenský pilot – stíhač a odešel v r. 1977 do Air Vítkovice jako pilot. Od r. 1993 Air Ostrava, 1996 IGEC, v r. 1997 důchod, ale pracoval dále v Air Ostrava a od r. 2000 Job Air, Let's Fly.",
-    image: "assets/images/atco/Trojčínský.jpg",
-    imageDescription: ""
+    image: ["assets/images/atco/Trojčínsky.jpg", "assets/images/atco/Trojčínský.jpg"],
+    imageDescription: "Bohumír Trojčínský"
   },
   {
     bio: {
@@ -373,8 +373,8 @@ const bioData = [
     },
     instruktor: [],
     info: "Před odchodem pracoval jako asistent ředitele letiště Mošnov (1970-1973). Odešel v listopadu 1973 do Hradce Králové do dopravního podniku, kde později pracoval jako ředitel.",
-    image: "assets/images/atco/Šmíd 1.jpg",
-    imageDescription: ""
+    image: ["assets/images/atco/Ivan Šmíd.png", "assets/images/atco/Šmíd 1.jpg", "assets/images/atco/šmíd.jpg"],
+    imageDescription: "Ivan Šmíd"
   },
   {
     bio: {
@@ -473,8 +473,8 @@ const bioData = [
       { "AO": "11.6.2003" }
     ],
     info: "TWR LKPO, LKZA: 1984. Dozorčí APN: 9.10.1967",
-    image: "",
-    imageDescription: ""
+    image: ["assets/images/atco/Ogurek.jpg", "assets/images/atco/Ogurek portrét.jpg"],
+    imageDescription: "Josef Ogurek"
   },
   {
     bio: {
@@ -546,8 +546,8 @@ const bioData = [
       { "SC": "24.1.2006" }
     ],
     info: "Nástup: 2.4.1973 / 1.6.1992. Dozorčí APN: 1.11.1974. Vedoucí regionální odborové jednotky CZATCA. 1992-2000 zástupce pro regionální letiště ve výkonné radě CZATCA. Propuštěn z organizačních důvodů v r. 1982 - přešel jako řlp nejprve do Vodochod, pak do Otrokovic a v r. 1992 se vrátil zpět do Ostravy. Na letišti působí dále jako pilot u El Montex a Aeroklubu, Od 2014 pseudopilot LKMT. Taktéž kapitán pro jachty",
-    image: "assets/images/atco/Kočvara portrét.jpg",
-    imageDescription: ""
+    image: ["assets/images/atco/Maca.jpg", "assets/images/atco/Rosta Maca.jpg"],
+    imageDescription: "Rostislav Máca"
   },
   {
     bio: {
@@ -1025,8 +1025,8 @@ const bioData = [
     },
     instruktor: [],
     info: "",
-    image: "",
-    imageDescription: ""
+    image: ["assets/images/atco/jiri Polmann.jpg", "assets/images/atco/Polmann.jpg"],
+    imageDescription: "Jiří Polmann"
   },
   {
     bio: {
@@ -1087,8 +1087,8 @@ const bioData = [
     },
     instruktor: [],
     info: "Nástup 1.9.2012 pro ACC, později APP/TWR LKMT. V zácviku na stanovišti od 1.7.2015",
-    image: "assets/images/atco/Plánička.jpg",
-    imageDescription: "Petr Takač"
+    image: "",
+    imageDescription: ""
   },
   {
     bio: {
