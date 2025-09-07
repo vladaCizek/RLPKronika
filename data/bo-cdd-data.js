@@ -9,7 +9,7 @@ const bioData = [
       "Začínala na Hrabůvce, v r. 1952 získala průkaz radiotelefonisty pro palubní vysílače.",
     ],
     departure: "1969 důchod",
-    image: "fotky/BO-CDD List/1_IMG_20250829_225144.jpg",
+    image: "assets/images/bo/Turkova_Milada_1.jpg",
   },
   {
     name: "Bílková Bedřiška",
@@ -21,7 +21,7 @@ const bioData = [
       "Začínala na Hrabůvce, v r. 1952 získala průkaz radiotelefonisty pro palubní vysílače.",
     ],
     departure: "1973 důchod",
-    image: "fotky/BO-CDD List/2_IMG_20250829_224040.jpg",
+    image: "assets/images/bo/Bilkova_Bedriska.jpg",
   },
   {
     name: "Lyčková Jiřina",
@@ -30,6 +30,7 @@ const bioData = [
     startDate: "1960",
     licenseBO: "1960",
     departure: "1979 důchod",
+    image: "assets/images/bo/Lyckova_Jirina.jpg",
   },
   {
     name: "Oháňková Ludmila (nyní Tomková)",
@@ -45,7 +46,7 @@ const bioData = [
     startDate: "1.4.1961",
     licenseBO: "1.10.1961",
     departure: "červen 1996 důchod",
-    image: "fotky/BO-CDD List/3_IMG_20250829_224202.jpg",
+    image: "assets/images/bo/Suruvkova_Dagmar.jpg",
   },
   {
     name: "Šimková Vlasta (nyní Murasová)",
@@ -53,6 +54,7 @@ const bioData = [
     startDate: "19.9.1964",
     licenseBO: "1.12.1964",
     departure: "červen 1998 důchod",
+    image: "assets/images/bo/Simkova_Vlasta.jpg",
   },
   {
     name: "Kslažková Anna",
@@ -61,6 +63,7 @@ const bioData = [
     licenseBO: "20.12.1967",
     additionalInfo: ["AO: 15.4.2004 ATIS"],
     departure: "31.12.2006 důchod",
+    image: "assets/images/bo/Ksiazkova_Anna_2.jpg",
   },
   {
     name: "Trnovcová Jana",
@@ -77,6 +80,7 @@ const bioData = [
     additionalInfo: [
       "Přišla z výpravny na letišti v r. 1972 a byla propuštěna z organizačních důvodů v r. 1982, odešla k Vítkovickým stavbám a od r. 1997 v důchodu.",
     ],
+    image: "assets/images/bo/Stankova_Blanka.jpg",
   },
   {
     name: "Kočvara Jiří",
@@ -117,6 +121,7 @@ const bioData = [
       "TASO 14.6.2016",
       "Výstavba 3/2018",
     ],
+    image: "assets/images/bo/Malcharkova_Eva_portret.jpg",
   },
   {
     name: "Němcová Taťána (dříve Jastřembská)",
@@ -128,6 +133,7 @@ const bioData = [
       "Přišla od AIR Ostrava kde pracovala jako stevardka.",
       "TASO 4.6.2016",
     ],
+    image: "assets/images/bo/Nemcova_Tatana_portret.jpg",
   },
   {
     name: "Mazumderová Irena",
@@ -139,6 +145,7 @@ const bioData = [
       "ASO: 4.5.2005",
       "Od 1.7. ADO LKPR",
     ],
+    image: "assets/images/bo/Mazumderova_Irena_portret.jpg",
   },
   {
     name: "Hloušková Renata",
@@ -153,6 +160,7 @@ const bioData = [
       "TASO/1.6.2016 Clearance Delivery",
       "Automatic System Operator D Analyst",
     ],
+    image: "assets/images/bo/Hlouskova_Renata_portret.jpg",
   },
   {
     name: "Holomková Šárka",
@@ -166,5 +174,6 @@ const bioData = [
       "2013 návrat z mateřské dovolené, obnovení licence BO, poloviční úvazek spolu s B. Knoflíčkem, od roku 2014 plný úvazek",
       "TASO/Sekretariát 1.6.2016",
     ],
+    image: "assets/images/bo/Holomkova_Sarka.jpg",
   },
 ];
