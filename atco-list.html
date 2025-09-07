@@ -28,6 +28,7 @@
     </section>
 
     <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/image-handler.js"></script>
     <script src="data/atco-data.js"></script>
     <script>
       // Bio component class
@@ -40,36 +41,12 @@
           const bioCard = document.createElement('div'); 
           bioCard.className = 'bio-card';
 
-          // Create image element with fallback
-          const imageContainer = document.createElement('div');
-          
-          if (this.data.image) {
-            const img = document.createElement('img');
-            img.src = this.data.image;
-            img.alt = this.data.imageDescription || this.data.bio.name;
-            img.className = 'bio-image';
-            
-            // Create placeholder for fallback
-            const placeholder = document.createElement('div');
-            placeholder.className = 'bio-placeholder';
-            placeholder.innerHTML = '👤';
-            placeholder.style.display = 'none';
-            
-            // Handle image load error
-            img.onerror = () => {
-              img.style.display = 'none';
-              placeholder.style.display = 'flex';
-            };
-            
-            imageContainer.appendChild(img);
-            imageContainer.appendChild(placeholder);
-          } else {
-            // Show placeholder if no image provided
-            const placeholder = document.createElement('div');
-            placeholder.className = 'bio-placeholder';
-            placeholder.innerHTML = '👤';
-            imageContainer.appendChild(placeholder);
-          }
+          // Create image container using ImageHandler
+          const imageHandler = new ImageHandler(
+            this.data.image,
+            this.data.imageDescription || this.data.bio.name
+          );
+          const imageContainer = imageHandler.createImageContainer();
 
           // Create content
           const bioContent = document.createElement('div');
