@@ -36,27 +36,27 @@
         const personnelRows = TS_DATA.personnel.map(person => {
           if (person.isHeader) {
             return `
-              <tr class="has-background-info-light">
-                <td><strong>${person.name}</strong></td>
-                <td></td>
+              <tr class="bg-sky-100">
+                <td class="px-4 py-2 border-b border-b-solid border-gray-300 text-gray-800"><strong>${person.name}</strong></td>
+                <td class="px-4 py-2 border-b border-b-solid border-gray-300"></td>
               </tr>
             `;
           } else {
             return `
-              <tr>
-                <td>${person.name}</td>
-                <td>${person.details || ''}</td>
+              <tr class="hover:bg-gray-50 text-gray-600">
+                <td class="px-4 py-2 border-b border-b-solid border-gray-300">${person.name}</td>
+                <td class="px-4 py-2 border-b border-b-solid border-gray-300">${person.details || ''}</td>
               </tr>
             `;
           }
         }).join('');
 
         const html = `
-          <table class="table is-striped is-hoverable is-fullwidth">
+          <table class="table border-collapse w-full">
             <thead>
               <tr>
-                <th>Jméno</th>
-                <th>Doba na AD - profese</th>
+                <th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Jméno</th>
+                <th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Doba na AD - profese</th>
               </tr>
             </thead>
             <tbody>
