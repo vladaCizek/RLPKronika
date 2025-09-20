@@ -3,7 +3,11 @@
     "allow": [
       "WebFetch(domain:picocss.com)",
       "WebSearch",
-      "WebFetch(domain:bulma.io)"
+      "WebFetch(domain:bulma.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:tailscan.com)",
+      "WebFetch(domain:ui.shadcn.com)",
+      "WebFetch(domain:uicolors.app)"
     ],
     "deny": [],
     "ask": []
