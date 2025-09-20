@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/overflow.css" />
     <title>BO/CDD List - Řízení Letového Provozu Ostrava</title>
   </head>
   <body>
@@ -37,22 +38,28 @@
 
         render() {
           const bioCard = document.createElement("div");
-          bioCard.className = "bio-card";
+          bioCard.className = "flex items-start gap-4 bg-white rounded-lg p-6 mb-6 shadow-lg";
 
           // Create image using ImageHandler
           const imageHandler = new ImageHandler(this.data.image, this.data.name);
           const imageContainer = imageHandler.createImageContainer();
+          imageContainer.className = "flex justify-center items-center w-32 h-32 rounded-lg bg-gray-200";
+
+          const imgElement = imageContainer.querySelector('img');
+          if (imgElement) {
+            imgElement.className = "object-contain";
+          }
 
           // Create content
           const bioContent = document.createElement("div");
-          bioContent.className = "bio-content";
+          bioContent.className = "flex-grow text-left";
 
           bioContent.innerHTML = `
-            <h3 class="bio-name is-size-4 has-text-weight-semibold">${
+            <h3 class="text-2xl font-extrabold text-gray-900 mb-1">${
               this.data.name
             }</h3>
-            <div class="bio-dates is-size-6 has-text-weight-medium">${this.formatDates()}</div>
-            <div class="bio-details is-size-6">
+            <div class="text-base font-medium text-gray-700 mb-1">${this.formatDates()}</div>
+            <div class="text-base text-gray-800">
               ${this.formatDetails()}
             </div>
           `;
@@ -78,21 +85,21 @@
           let details = "";
 
           if (this.data.startDate) {
-            details += `<p><span class="has-text-weight-semibold">Nástup:</span> ${this.data.startDate}</p>`;
+            details += `<p class="mb-0"><span class="font-bold text-gray-900">Nástup:</span> ${this.data.startDate}</p>`;
           }
 
           if (this.data.licenseBO) {
-            details += `<p><span class="has-text-weight-semibold">Licence BO:</span> ${this.data.licenseBO}</p>`;
+            details += `<p class="mb-0"><span class="font-bold text-gray-900">Licence BO:</span> ${this.data.licenseBO}</p>`;
           }
 
           if (this.data.additionalInfo && this.data.additionalInfo.length > 0) {
             this.data.additionalInfo.forEach((info) => {
-              details += `<p class="has-text-weight-normal">${info}</p>`;
+              details += `<p class="mb-0">${info}</p>`;
             });
           }
 
           if (this.data.departure) {
-            details += `<p><span class="has-text-weight-semibold">Odchod:</span> ${this.data.departure}</p>`;
+            details += `<p class="mb-0"><span class="font-bold text-gray-900">Odchod:</span> ${this.data.departure}</p>`;
           }
 
           return details;
