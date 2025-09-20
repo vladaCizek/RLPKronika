@@ -12,7 +12,7 @@
     <section>
       <div class="wrapper">
         <div class="text-center mb-12">
-          <h1 class="text-5xl font-bold text-gray-900 mb-6">Vedoucí LKMT</h1>
+          <h1 class="text-5xl font-bold text-gray-900 mb-12">Vedoucí LKMT</h1>
           <p class="text-xl text-gray-600 font-medium">Seznam vedoucích pracovníků kontrolního centra LKMT.</p>
         </div>
         <div id="vedouci-content" class="max-w-6xl mx-auto"></div>
@@ -29,30 +29,30 @@
           const rows = table.data.map(person => {
             if (person.name === "" && person.period.includes("funkce zrušena")) {
               return `
-                <tr class="has-background-warning-light">
-                  <td><em>${person.period}</em></td>
-                  <td></td>
-                  <td></td>
+                <tr class="bg-yellow-100">
+                  <td class="px-4 py-2 border-b border-b-solid border-gray-300"><em>${person.period}</em></td>
+                  <td class="px-4 py-2 border-b border-b-solid border-gray-300"></td>
+                  <td class="px-4 py-2 border-b border-b-solid border-gray-300"></td>
                 </tr>
               `;
             }
             return `
-              <tr>
-                <td>${person.name}</td>
-                <td>${person.period}</td>
-                <td>${person.position}</td>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-2 border-b border-b-solid border-gray-300">${person.name}</td>
+                <td class="px-4 py-2 border-b border-b-solid border-gray-300">${person.period}</td>
+                <td class="px-4 py-2 border-b border-b-solid border-gray-300">${person.position}</td>
               </tr>
             `;
           }).join('');
 
-          const headers = table.title === "Vedoucí stanoviště" ? 
-            '<th>Jméno</th><th>Doba ve funkci</th><th></th>' :
-            '<th>Jméno</th><th>Doba ve funkci</th><th>Funkce</th>';
+          const headers = table.title === "Vedoucí stanoviště" ?
+            '<th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Jméno</th><th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Doba ve funkci</th><th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500"></th>' :
+            '<th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Jméno</th><th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Doba ve funkci</th><th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Funkce</th>';
 
           return `
             <div class="mb-6">
               <h2 class="title is-size-3 has-text-weight-semibold mb-4">${table.title}</h2>
-              <table class="table is-striped is-hoverable is-fullwidth">
+              <table class="table border-collapse w-full">
                 <thead>
                   <tr>
                     ${headers}

@@ -1,0 +1,21 @@
+/* Tailwind CSS Table Utilities */
+
+/* ===== TABLE LAYOUT ===== */
+.table-auto { table-layout: auto; }
+.table-fixed { table-layout: fixed; }
+
+/* ===== BORDER COLLAPSE ===== */
+.border-collapse { border-collapse: collapse; }
+.border-separate { border-collapse: separate; }
+
+/* ===== EMPTY CELLS ===== */
+.table-empty-cells-show { empty-cells: show; }
+.table-empty-cells-hide { empty-cells: hide; }
+
+/* ===== CAPTION SIDE ===== */
+.caption-top { caption-side: top; }
+.caption-bottom { caption-side: bottom; }
+
+/* ===== BORDER STYLE UTILITIES ===== */
+.border-solid { border-style: solid; }
+.border-b-solid { border-bottom-style: solid; }
