@@ -27,26 +27,47 @@
     <script src="assets/js/navigation.js"></script>
     <script src="data/vedouci-rlp-data.js"></script>
     <script>
+      
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <title>Vedoucí ŘLP - Řízení Letového Provozu Ostrava</title>
+  </head>
+  <body>
+    <div id="navigation" data-page="vedouci-rlp.html" data-theme="dark"></div>
+
+    <section>
+      <div class="wrapper">
+        <div class="text-center mb-12">
+          <h1 class="text-5xl font-bold text-gray-900 mb-6">Vedoucí ŘLP</h1>
+          <p class="text-xl text-gray-600 font-medium mb-4">Seznam vedoucích pracovníků řízení letového provozu na letišti Ostrava.</p>
+          <p class="text-lg text-gray-700">Letouni pracovníci provozovatele letiště LKMT (včetně letiště Ostrava - Stračice)</p>
+        </div>
+        <div id="vedouci-rlp-content" class="max-w-6xl mx-auto"></div>
+      </div>
+    </section>
+
+    <script src="assets/js/navigation.js"></script>
+    <script src="data/vedouci-rlp-data.js"></script>
+    <script>
       function renderVedouciRLPTable() {
         const container = document.getElementById('vedouci-rlp-content');
         
         const personnelRows = VEDOUCI_RLP_DATA.personnel.map(person => {
           return `
-            <tr>
-              <td>${person.name}</td>
-              <td>${person.period}</td>
-              <td>${person.position}</td>
+            <tr class="hover:bg-gray-50 text-gray-600">
+              <td class="px-4 py-2 border-b border-b-solid border-gray-300">${person.name}</td>
+              <td class="px-4 py-2 border-b border-b-solid border-gray-300">${person.period}</td>
+              <td class="px-4 py-2 border-b border-b-solid border-gray-300">${person.position}</td>
             </tr>
           `;
         }).join('');
 
         const html = `
-          <table class="table is-striped is-hoverable is-fullwidth">
+          <table class="table border-collapse w-full">
             <thead>
               <tr>
-                <th>Jméno</th>
-                <th>Doba ve funkci</th>
-                <th>Funkce</th>
+                <th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Jméno</th>
+                <th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Doba ve funkci</th>
+                <th class="px-4 py-3 bg-gray-100 border-b border-b-solid border-gray-500 font-semibold text-left">Funkce</th>
               </tr>
             </thead>
             <tbody>
