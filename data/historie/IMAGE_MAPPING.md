@@ -1,61 +1,92 @@
-# Image Organization Map
-## Ostrava Airport History Images (53 total)
+# Historie Images Mapping
 
-### Period 1: Hrabůvka Airport (1936-1959)
-- image1.jpeg → 01_Hrabuvka_hangar_historical.jpeg
-- image2.jpeg → 01_Hrabuvka_Dakota_restaurant.jpeg  
-- image3.png → 01_Hrabuvka_area_map.png
+This document maps the image references used in the historie.js data files to the actual image files in the `assets/images/historie/` directory.
 
-### Period 2: GONIO Radio Navigation
-- image4.jpeg → 02_GONIO_station_building.jpeg
-- image5.jpeg → 02_GONIO_equipment.jpeg
+## Image Mapping Reference
 
-### Period 3: Early Mošnov (1959-1969)  
-- image6.jpeg → 03_Mosnov_early_terminal.jpeg
-- image7.jpeg → 03_Mosnov_TWR_military.jpeg
-- image8.jpeg → 03_Mosnov_APP_control.jpeg
-- image9.jpeg → 03_Mosnov_interior_luxury.jpeg
-- image10.jpeg → 03_Mosnov_aircraft_1960s.jpeg
+| Section | Image Reference | Actual File | Description |
+|---------|-----------------|-------------|-------------|
+| **Hrabůvka 1936-1959** |
+| | image1.jpeg | assets/images/historie/image1.jpeg | Bývalý hangár v Hrabůvce |
+| | image2.jpeg | assets/images/historie/image2.jpeg | Restaurace Dakota, dříve využívaná jako provozní budova ČSA |
+| **GONIO** |
+| | image3.jpeg | assets/images/historie/image3.jpeg | Historické fotografie goniometrické stanice |
+| | image4.jpeg | assets/images/historie/image4.jpeg | Technické vybavení GONIO |
+| **Mošnov 1959-1969** |
+| | image5.jpeg | assets/images/historie/image5.jpeg | Vojenská TWR, bílá věž |
+| | image6.jpeg | assets/images/historie/image6.jpeg | Stanoviště APP, Książek a Janaček |
+| | image7.jpeg | assets/images/historie/image7.jpeg | Interiér odletové haly v sedmdesátých letech, kdy létání bylo luxus |
+| **Období 1968-1989** |
+| | image8.jpeg | assets/images/historie/image8.jpeg | Rudolf Kachel, APP na staré věži |
+| | image9.jpeg | assets/images/historie/image9.jpeg | An 225 Mrija - Největší dopravní letadlo na světě |
+| **Období 1990-1999** |
+| | image10.jpeg | assets/images/historie/image10.jpeg | Nová budova TWR/APP nad hasičárnou |
+| | image11.jpeg | assets/images/historie/image11.jpeg | 90. léta, odbavovací hala APN central, letadla Air Ostrava |
+| **Období 2000-2009** |
+| | image12.jpeg | assets/images/historie/image12.jpeg | Briefing/ARO |
+| | image13.jpeg | assets/images/historie/image13.jpeg | Simulátor APP |
+| | image14.jpeg | assets/images/historie/image14.jpeg | 1. ročník dnů NATO na letišti Mošnov |
+| **Období 2010-2019** |
+| | image15.jpeg | assets/images/historie/image15.jpeg | Marcel Poledník řídí první lety na SNS |
+| | image16.jpeg | assets/images/historie/image16.jpeg | Staví se nám nová věž - A je hotovo |
+| | image17.jpeg | assets/images/historie/image17.jpeg | Nová TWR |
+| **Období 2020-2026** |
+| | image18.png | assets/images/historie/image18.png | Pohled z věže na APN jih |
+| | image19.png | assets/images/historie/image19.png | Pohled na APN central a jih, vlakové nádraží |
+| | image20.png | assets/images/historie/image20.png | Výstavba letištního cargoterminálu |
 
-### Period 4: Soviet Era (1968-1989)
-- image11.jpeg → 04_Soviet_occupation_1968.jpeg
-- image12.jpeg → 04_Rudolf_Kachel_APP.jpeg
-- image13.jpeg → 04_An225_Mrija_historical.jpeg
+## File Format Notes
 
-### Period 5: Post-Revolution (1990-1999)
-- image14.jpeg → 05_New_TWR_building.jpeg
-- image15.jpeg → 05_Air_Ostrava_aircraft.jpeg
-- image16.jpeg → 05_APN_central_1990s.jpeg
+- Images 1-17 are JPEG format (.jpeg extension)
+- Images 18-20 are PNG format (.png extension)
+- Images 21+ continue as JPEG format
 
-### Period 6: Modernization (2000-2009)
-- image17.jpeg → 06_TWR_reconstruction.jpeg
-- image18.png → 06_Eurocat_2000_system.png
-- image19.png → 06_Technical_room.png
-- image20.png → 06_Briefing_ARO.png
-- image21.jpeg → 06_NATO_days_2003.jpeg
-- image22.jpeg → 06_Construction_new_terminal.jpeg
-- image23.jpeg → 06_Headquarters_LKMT.jpeg
-- image24.jpeg → 06_APN_Central_operations.jpeg
-- image25.jpeg → 06_Simulator_APP.jpeg
+## Original HTML Image References
 
-### Period 7: Major Changes (2010-2019)
-- image26.jpeg → 07_Old_TWR_interior.jpeg
-- image27.jpeg → 07_Marcel_Polednik_SNS.jpeg
-- image28.jpeg → 07_New_tower_construction_1.jpeg
-- image29.jpeg → 07_New_tower_construction_2.jpeg
-- image30.jpeg → 07_New_tower_construction_3.jpeg
-- image31.jpeg → 07_New_tower_completed.jpeg
-- image32.jpeg → 07_Terminal_TR8_system.jpeg
-- image33.jpeg → 07_New_TWR_interior.jpeg
+Some images in the original HTML had specific filenames that have been mapped to the numbered system:
 
-### Period 8: Recent Era (2020-2026)
-- image34.jpeg → 08_APN_south_view.jpeg
-- image35.jpeg → 08_Overall_airport_view.jpeg
-- image36.jpeg → 08_Cargo_terminal_construction.jpeg
+- `hrabuvka_hangar.jpg` → `image1.jpeg`
+- `dakota_restaurant.jpg` → `image2.jpeg`
+- `gonio_station.jpg` → `image3.jpeg`
+- `gonio_equipment.jpg` → `image4.jpeg`
+- `mosnov_early_terminal.jpg` → `image5.jpeg`
+- `mosnov_app_control.jpg` → `image6.jpeg`
+- `mosnov_interior_luxury.jpg` → `image7.jpeg`
+- `Kachel.jpg` → `image8.jpeg`
+- `renamed/slide10_ruzne.jpeg` → `image9.jpeg`
+- `new_twr_building.jpg` → `image10.jpeg`
+- `renamed/slide10_ruzne.jpeg` → `image11.jpeg`
+- `briefingsv.JPG` → `image12.jpeg`
+- `appsv.jpg` → `image13.jpeg`
+- `renamed/slide10_ruzne.jpeg` → `image14.jpeg`
+- `Plánička.jpg` → `image15.jpeg`
+- `new_tower_construction.jpg` → `image16.jpeg`
+- `new_twr_interior.jpg` → `image17.jpeg`
+- `apn_south_view.jpg` → `image18.png`
+- `overall_airport_view.jpg` → `image19.png`
+- `cargo_terminal_construction.jpg` → `image20.png`
 
-### Historical Photos and Additional Images
-- image37-image53.jpeg → Various historical and technical photos
+## Usage in JavaScript
 
-## File Locations
-- Source: C:\temp_ppt_extraction\_LP historie\ppt\media\
-- Target: C:\temp_ppt_extraction\organized_images\
+All images are referenced in the data files using the format:
+```javascript
+{
+  src: 'assets/images/historie/image{number}.{extension}',
+  alt: 'Alt text description',
+  caption: 'Caption text'
+}
+```
+
+## Directory Structure
+
+```
+assets/images/historie/
+├── image1.jpeg
+├── image2.jpeg
+├── image3.jpeg
+├── ...
+├── image18.png
+├── image19.png
+├── image20.png
+└── (continues with more images)
+```

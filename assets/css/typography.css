@@ -67,6 +67,87 @@ p:last-child {
   margin-bottom: 0;
 }
 
+/* Reset paragraph margin for specific pages */
+.no-paragraph-margin p {
+  margin-bottom: 0;
+}
+
+/* Historie section layout */
+.no-paragraph-margin section {
+  margin-bottom: 3rem;
+}
+
+.no-paragraph-margin section h2 {
+  margin-bottom: 1.5rem;
+  clear: both;
+}
+
+/* When content has description - images float left, text flows around */
+.no-paragraph-margin .description-with-images {
+  overflow: hidden; /* Contains floated elements */
+  margin-bottom: 2rem;
+}
+
+.no-paragraph-margin .description-with-images figure {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+  max-width: 300px;
+  clear: left;
+}
+
+/* When no description - images in flex row */
+.no-paragraph-margin .images-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.no-paragraph-margin .images-row figure {
+  flex: 0 0 auto;
+  max-width: 250px;
+  margin: 0;
+}
+
+/* Timeline content styling */
+.no-paragraph-margin .timeline-content {
+  clear: both;
+}
+
+/* General image styling */
+.no-paragraph-margin figure img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+}
+
+.no-paragraph-margin figure figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .no-paragraph-margin .description-with-images figure {
+    float: none;
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
+
+  .no-paragraph-margin .images-row {
+    flex-direction: column;
+  }
+
+  .no-paragraph-margin .images-row figure {
+    max-width: 100%;
+  }
+}
+
 /* Other text elements */
 blockquote {
   font-family: 'DM Serif Display', Georgia, 'Times New Roman', serif;
