@@ -37,6 +37,49 @@
         outline: none;
       }
 
+      /* Main timeline container */
+      #historie-content .flex-1 {
+        position: relative;
+        padding-left: 3rem;
+      }
+
+      /* Continuous timeline border */
+      #historie-content .flex-1::before {
+        content: '';
+        position: absolute;
+        left: 0.5rem;
+        top: 30px;
+        bottom: 60px;
+        width: 3px;
+        background-color: #e9eaeb;
+        z-index: 1;
+      }
+
+      #historie-content section {
+        position: relative;
+        margin-bottom: 3rem;
+      }
+
+      #historie-content section h2 {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Timeline dots for main section titles */
+      #historie-content section h2::before {
+        content: '';
+        position: absolute;
+        left: -2.9rem;
+        top: 1rem;
+        width: 16px;
+        height: 16px;
+        background-color: white;
+        border: 3px solid #374151;
+        border-radius: 50%;
+        box-shadow: 0 0 0 6px white;
+        z-index: 10;
+      }
+
       #historie-content h4 {
         color: #374151; /* darker gray for year subtitles */
         margin-bottom: 0.25rem; /* reduced spacing after year titles */
