@@ -39,14 +39,14 @@
       }
 
       /* Main content area */
-      #atco-content .flex-1 {
+      #atco-content > .wrapper > .flex > .flex-1 {
         position: relative;
         padding-left: 3rem;
       }
 
       /* Continuous timeline border */
-      #atco-content .flex-1::before {
-        content: '';
+      #atco-content > .wrapper > .flex > .flex-1::before {
+        content: '';   
         position: absolute;
         left: 0.5rem;
         top: 30px;
@@ -101,7 +101,7 @@
 
         render() {
           const bioCard = document.createElement("div");
-          bioCard.className = "flex items-start gap-4 bg-white rounded-lg p-6 mb-6 shadow-lg";
+          bioCard.className = "p-4 mb-4 pb-6 border-b-4 border-gray-200";
 
           // Create image container using ImageHandler
           const imageHandler = new ImageHandler(
@@ -109,36 +109,32 @@
             this.data.imageDescription || this.data.bio.name
           );
           const imageContainer = imageHandler.createImageContainer();
-          imageContainer.className = "flex justify-center items-center w-32 h-32 rounded-lg bg-gray-200";
+          imageContainer.className = "flex justify-center items-center w-20 h-20 rounded bg-gray-200";
 
           const imgElement = imageContainer.querySelector('img');
           if (imgElement) {
-            imgElement.className = "object-contain";
+            imgElement.className = "object-contain rounded";
           }
 
-          // Create content
-          const bioContent = document.createElement("div");
-          bioContent.className = "flex-1 text-left";
-
-          bioContent.innerHTML = `
-            <div class="w-full pb-2 mb-2 border-b-1 border-gray-200">
-              <h3 class="text-2xl font-extrabold text-gray-700 mb-1">${this.data.bio.name}</h3>
-              <div class="text-base font-medium text-gray-600 mb-1">${this.formatDates()}</div>
+          bioCard.innerHTML = `
+            <!-- First row: Name and dates -->
+            <div class="mb-3 pb-2 border-b border-gray-200">
+              <h3 class="text-lg font-bold text-gray-700 mb-0">${this.data.bio.name} <span class="text-base font-normal text-gray-500 ml-3" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">${this.formatDates()}</span></h3>
+              ${this.formatAdditionalInfo() ? `<div class="mt-1 text-sm text-gray-800">${this.data.info}</div>` : ''}
             </div>
-            <div class="flex flex-col gap-4 mt-6">
-              <div class="grid grid-cols-3 gap-4 mb-6">
+
+            <!-- Second row: Picture and info in columns -->
+            <div class="flex gap-5">
+              <div class="w-20">
+                ${imageContainer.outerHTML}
+              </div>
+              <div class="flex-1 grid grid-cols-3 gap-4 text-sm">
                 ${this.formatBasicInfo()}
                 ${this.formatLicences()}
                 ${this.formatInstruktorInfo()}
               </div>
-              <div>
-                ${this.formatAdditionalInfo()}
-              </div>
             </div>
           `;
-
-          bioCard.appendChild(imageContainer);
-          bioCard.appendChild(bioContent);
 
           return bioCard;
         }
@@ -149,7 +145,10 @@
             dates += `*${this.data.bio.dob}`;
           }
           if (this.data.bio.dod) {
-            dates += ` +${this.data.bio.dod}`;
+            // Only show death info if it's an actual date, not just a symbol
+            if (this.data.bio.dod !== '†') {
+              dates += `<span style="margin: 0 12px;">•</span>+${this.data.bio.dod}`;
+            }
           }
           return dates;
         }
@@ -160,8 +159,8 @@
           return `
             <div class="bio-section basic-info">
               <div class="bio-section-content">
-                ${this.data.bio.nastup ? `<p class="mb-0"><span class="font-bold text-gray-700">Nástup:</span> ${this.data.bio.nastup}</p>` : ''}
-                ${this.data.bio.odchod ? `<p class="mb-0"><span class="font-bold text-gray-700">Odchod:</span> ${this.data.bio.odchod}</p>` : ''}
+                ${this.data.bio.nastup ? `<p class="mb-0"><span class="font-semibold text-gray-700">Nástup:</span> ${this.data.bio.nastup}</p>` : ''}
+                ${this.data.bio.odchod ? `<p class="mb-0"><span class="font-semibold text-gray-700">Odchod:</span> ${this.data.bio.odchod}</p>` : ''}
               </div>
             </div>
           `;
@@ -173,7 +172,7 @@
           let licenceContent = '';
           this.data.licence.licences.forEach(licence => {
             for (const [key, value] of Object.entries(licence)) {
-              licenceContent += `<p class="mb-0"><span class="font-bold text-gray-700">${key}:</span> ${value}</p>`;
+              licenceContent += `<p class="mb-0"><span class="font-semibold text-gray-700">${key}:</span> ${value}</p>`;
             }
           });
 
@@ -192,7 +191,7 @@
           let instruktorContent = '';
           this.data.instruktor.forEach(inst => {
             for (const [key, value] of Object.entries(inst)) {
-              instruktorContent += `<p class="mb-0"><span class="font-bold text-gray-700">${key}:</span> ${value}</p>`;
+              instruktorContent += `<p class="mb-0"><span class="font-semibold text-gray-700">${key}:</span> ${value}</p>`;
             }
           });
 
@@ -208,7 +207,7 @@
 
           return `
             <div>
-              <p class="mb-0 text-base text-gray-800"><span class="font-bold text-gray-700">Dodatečné informace:</span> ${this.data.info}</p>
+              <p class="mb-0 text-gray-800">${this.data.info}</p>
             </div>
           `;
         }

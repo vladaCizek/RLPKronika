@@ -7,13 +7,17 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:tailscan.com)",
       "WebFetch(domain:ui.shadcn.com)",
-      "WebFetch(domain:uicolors.app)"
+      "WebFetch(domain:uicolors.app)",
+      "Bash(start \"C:\\Users\\vlada\\OneDrive\\RizeniLetovehoProvozuOstrava\\atco-list.html\")",
+      "mcp__docker__puppeteer_navigate",
+      "mcp__docker__browser_navigate",
+      "mcp__docker__browser_take_screenshot"
     ],
     "deny": [],
     "ask": []
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "docker"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }
