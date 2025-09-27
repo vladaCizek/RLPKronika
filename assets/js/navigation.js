@@ -1,7 +1,7 @@
 // Navigation Component
 function createNavigation(activePage = '') {
   return `
-    <nav class="bg-white flex justify-between items-center px-4 border-b-1 border-gray-100 shadow-md" role="navigation" aria-label="main navigation">
+    <nav class="sticky flex justify-between items-center px-4 top-0 bg-slate-100 border-b-1 border-gray-300 shadow-md" role="navigation" aria-label="main navigation">
       <div class="">
         <a class="px-4" href="index.html">
           <h3 class="text-gray-700">ŘLP Ostrava</h3>
@@ -10,13 +10,13 @@ function createNavigation(activePage = '') {
 
       <div id="navbarBasic">
         <div class="flex items-center font-semibold">
-          <a class="px-4 py-3 transition-colors duration-200 text-gray-600 border-r-1 border-gray-300 ${activePage === 'index.html' ? 'is-active font-bold text-black' : ''}" href="index.html">Homepage</a>
-          <a class="px-4 py-3 transition-colors duration-200 text-gray-600  border-r-1 border-gray-300 ${activePage === 'historie.html' ? 'is-active font-bold text-black' : ''}" href="historie.html">Historie</a>
-          <a class="px-4 py-3 transition-colors duration-200 text-gray-600  border-r-1 border-gray-300 ${activePage === 'atco-list.html' ? 'is-active font-bold text-black' : ''}" href="atco-list.html">ATCO</a>
-          <a class="px-4 py-3 transition-colors duration-200 text-gray-600  border-r-1 border-gray-300 ${activePage === 'bo-cdd-list.html' ? 'is-active font-bold text-black' : ''}" href="bo-cdd-list.html">BO/CDD</a>
-          <a class="px-4 py-3 transition-colors duration-200 text-gray-600  border-r-1 border-gray-300 ${activePage === 'ts.html' ? 'is-active font-bold text-black' : ''}" href="ts.html">TS</a>
-          <a class="px-4 py-3 transition-colors duration-200  text-gray-600  border-r-1 border-gray-300 ${activePage === 'vedouci-rlp.html' ? 'is-active font-bold text-black' : ''}" href="vedouci-rlp.html">Vedoucí ŘLP</a>
-          <a class="px-4 py-3 transition-colors duration-200  text-gray-600 text-gray-600 border-r-1 border-gray-300 ${activePage === 'vedouci-klmt.html' ? 'is-active font-bold text-black' : ''}" href="vedouci-klmt.html">Vedoucí LKMT</a>
+          <a class="px-4 py-3 transition-colors duration-200 text-gray-600 border-r-1 border-slate-300 ${activePage === 'index.html' ? 'is-active font-bold text-black' : ''}" href="index.html">Homepage</a>
+          <a class="px-4 py-3 transition-colors duration-200 text-gray-600  border-r-1 border-slate-300 ${activePage === 'historie.html' ? 'is-active font-bold text-black' : ''}" href="historie.html">Historie</a>
+          <a class="px-4 py-3 transition-colors duration-200 text-gray-600  border-r-1 border-slate-300 ${activePage === 'atco-list.html' ? 'is-active font-bold text-black' : ''}" href="atco-list.html">ATCO</a>
+          <a class="px-4 py-3 transition-colors duration-200 text-gray-600  border-r-1 border-slate-300 ${activePage === 'bo-cdd-list.html' ? 'is-active font-bold text-black' : ''}" href="bo-cdd-list.html">BO/CDD</a>
+          <a class="px-4 py-3 transition-colors duration-200 text-gray-600  border-r-1 border-slate-300 ${activePage === 'ts.html' ? 'is-active font-bold text-black' : ''}" href="ts.html">TS</a>
+          <a class="px-4 py-3 transition-colors duration-200  text-gray-600  border-r-1 border-slate-300 ${activePage === 'vedouci-rlp.html' ? 'is-active font-bold text-black' : ''}" href="vedouci-rlp.html">Vedoucí ŘLP</a>
+          <a class="px-4 py-3 transition-colors duration-200  text-gray-600 text-gray-600 border-r-1 border-slate-300 ${activePage === 'vedouci-klmt.html' ? 'is-active font-bold text-black' : ''}" href="vedouci-klmt.html">Vedoucí LKMT</a>
           <a class="px-4 py-3 transition-colors duration-200 text-gray-600  ${activePage === 'galerie.html' ? 'is-active font-bold text-black' : ''}" href="galerie.html">Galerie</a>
         </div>
       </div>

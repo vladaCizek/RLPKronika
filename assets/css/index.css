@@ -4,3 +4,8 @@
 @import url('./tailwind-utilities.css');
 /* @import url('./bio.css');
 @import url('./historie.css'); */
+
+body: {
+    /* bg-gray-50 */
+    background-color: #6b7280
+}

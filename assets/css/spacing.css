@@ -218,3 +218,13 @@
 .ml-20 { margin-left: var(--space-20); }
 .ml-24 { margin-left: var(--space-24); }
 .ml-auto { margin-left: auto; }
+
+/* ===== SPACE BETWEEN ===== */
+.space-y-0 > * + * { margin-top: var(--space-0); }
+.space-y-1 > * + * { margin-top: var(--space-1); }
+.space-y-2 > * + * { margin-top: var(--space-2); }
+.space-y-3 > * + * { margin-top: var(--space-3); }
+.space-y-4 > * + * { margin-top: var(--space-4); }
+.space-y-5 > * + * { margin-top: var(--space-5); }
+.space-y-6 > * + * { margin-top: var(--space-6); }
+.space-y-8 > * + * { margin-top: var(--space-8); }

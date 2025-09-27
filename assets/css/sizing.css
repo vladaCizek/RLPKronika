@@ -44,6 +44,13 @@
 .w-max { width: max-content; }
 .w-fit { width: fit-content; }
 
+/* ===== MIN WIDTH ===== */
+.min-w-0 { min-width: 0; }
+.min-w-full { min-width: 100%; }
+.min-w-min { min-width: min-content; }
+.min-w-max { min-width: max-content; }
+.min-w-fit { min-width: fit-content; }
+
 /* ===== HEIGHT ===== */
 .h-0 { height: 0; }
 .h-1 { height: 0.25rem; }

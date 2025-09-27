@@ -5,6 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/index.css" />
     <title>Historie - Řízení Letového Provozu Ostrava</title>
+    <style>
+      /* Navigation styling */
+      #historie-content nav a {
+        color: #374151; /* dark gray */
+        text-decoration: none;
+        display: block;
+        padding: 0.25rem 0;
+        border-left: 3px solid transparent;
+        transition: all 0.2s ease;
+      }
+
+      #historie-content nav a:visited {
+        color: #374151; /* same dark gray for visited */
+      }
+
+      #historie-content nav a:hover {
+        color: #111827; /* darker gray on hover */
+        border-left-color: #6b7280;
+        padding-left: 0.5rem;
+      }
+
+      #historie-content nav a.active {
+        color: #111827; /* darker gray for active */
+        border-left-color: #374151;
+        font-weight: 600;
+        padding-left: 0.5rem;
+      }
+
+      #historie-content nav a:focus {
+        outline: none;
+      }
+
+    </style>
   </head>
   <body class="no-paragraph-margin">
     <div id="navigation" data-page="historie.html" data-theme="dark"></div>
@@ -20,8 +53,8 @@
         const container = document.getElementById('historie-content');
 
         function renderNavigation() {
-          return HISTORIE_DATA.navigation.map(navItem => `
-            <a href="${navItem.href}">
+          return HISTORIE_DATA.navigation.map((navItem, index) => `
+            <a href="${navItem.href}" ${index === 0 ? 'class="active"' : ''}>
               ${navItem.label}
             </a>
           `).join('');
@@ -84,12 +117,16 @@
         }
 
         function renderSectionImages(section) {
+          // Images disabled for layout testing
+          /*
           return section.images.map(image => `
             <figure>
               <img src="${image.src}" alt="${image.alt}" onerror="this.style.display='none'">
               <figcaption><small>${image.caption}</small></figcaption>
             </figure>
           `).join('');
+          */
+          return '';
         }
 
         function renderSections() {
@@ -109,24 +146,30 @@
 
         const html = `
           <div class="wrapper">
-            <div>
+            <!-- Page Title -->
+            <div class="mb-8 pb-6">
+              <h1>${HISTORIE_DATA.title}</h1>
+              <p>${HISTORIE_DATA.description}</p>
+              <h3>1936-2026</h3>
+            </div>
+
+            <div class="flex gap-8">
               <!-- Sidebar Navigation -->
-              <div>
-                <nav>
-                  <p>Historická období</p>
-                  ${renderNavigation()}
-                </nav>
+              <div class="w-64 flex-none">
+                <div class="sticky top-0" style="position: sticky; top: 1rem;">
+                  <nav>
+                    <p class="font-bold mb-4 text-blue-700">Historická období</p>
+                    <div class="space-y-2">
+                      ${renderNavigation()}
+                    </div>
+                  </nav>
+                </div>
               </div>
 
               <!-- Main Content -->
-              <div>
+              <div class="flex-1 min-w-0">
                 <div>
-                  <h1>${HISTORIE_DATA.title}</h1>
-                  <p>${HISTORIE_DATA.description}</p>
-                   <h3>1936-2026</h3>
-
                   ${renderSections()}
-
                 </div>
               </div>
             </div>

@@ -131,10 +131,8 @@
           });
           
           return `
-            <div class="bio-section instruktor">
-              <div class="bio-section-content">
-                ${instruktorContent}
-              </div>
+            <div>
+              ${instruktorContent}
             </div>
           `;
         }
@@ -143,10 +141,8 @@
           if (!this.data.info) return '';
           
           return `
-            <div class="bio-section additional-info">
-              <div class="bio-section-content">
-                <p class="mb-0 text-base text-gray-800"><span class="font-bold text-gray-700">Dodatečné informace:</span> ${this.data.info}</p>
-              </div>
+            <div>
+              <p class="mb-0 text-base text-gray-800"><span class="font-bold text-gray-700">Dodatečné informace:</span> ${this.data.info}</p>
             </div>
           `;
         }
