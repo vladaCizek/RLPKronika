@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <title>Galerie - Řízení Letového Provozu Ostrava</title>
-  </head>
-  <body>
-    <div id="navigation" data-page="galerie.html" data-theme="dark"></div>
 
-    <section>
-      <div class="wrapper">
-        <div class="text-center mb-12">
-          <h1 class="text-5xl font-bold text-gray-900 mb-6">Galerie</h1>
-          <p class="text-xl text-gray-600 font-medium">Fotografická dokumentace historie řízení letového provozu na letišti Ostrava.</p>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <title>Galerie - Řízení Letového Provozu Ostrava</title>
+</head>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-xl font-semibold text-gray-900 mb-3">Společné fotky</h2>
-            <p class="text-gray-600">Kolektivní fotografie pracovníků řízení letového provozu.</p>
-          </div>
+<body>
+  <div id="navigation" data-page="galerie.html" data-theme="dark"></div>
 
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-xl font-semibold text-gray-900 mb-3">Historické fotky</h2>
-            <p class="text-gray-600">Archivní fotografie z historie řízení letového provozu na letišti Ostrava.</p>
-          </div>
-
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-xl font-semibold text-gray-900 mb-3">Aktuální fotky</h2>
-            <p class="text-gray-600">Současné fotografie pracovníků a zařízení řízení letového provozu.</p>
-          </div>
-
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-xl font-semibold text-gray-900 mb-3">Letiště</h2>
-            <p class="text-gray-600">Fotografie letiště Ostrava, jeho vybavení a infrastruktury.</p>
-          </div>
-        </div>
+  <section>
+    <div class="wrapper">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">Galerie</h1>
+        <p class="text-xl text-gray-600 font-medium">Fotografická dokumentace historie řízení letového provozu na
+          letišti Ostrava.</p>
       </div>
-    </section>
 
-    <script src="assets/js/navigation.js"></script>
-  </body>
+      <div id="gallery-content" class="max-w-6xl mx-auto">
+        <!-- Gallery will be rendered here -->
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/js/navigation.js"></script>
+  <script src="data/gallery-data.js"></script>
+  <script src="assets/js/gallery.js"></script>
+</body>
+
 </html>
