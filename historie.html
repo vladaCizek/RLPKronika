@@ -1,189 +1,245 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <title>Historie - Řízení Letového Provozu Ostrava</title>
-    <style>
-      /* Navigation styling */
-      #historie-content nav a {
-        color: #374151; /* dark gray */
-        text-decoration: none;
-        display: block;
-        padding: 0.25rem 0;
-        border-left: 3px solid transparent;
-        transition: all 0.2s ease;
-      }
 
-      #historie-content nav a:visited {
-        color: #374151; /* same dark gray for visited */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/masonry.css" />
+  <title>Historie - Řízení Letového Provozu Ostrava</title>
+  <style>
+    /* Navigation styling */
+    #historie-content nav a {
+      color: #374151;
+      /* dark gray */
+      text-decoration: none;
+      display: block;
+      padding: 0.25rem 0;
+      border-left: 3px solid transparent;
+      transition: all 0.2s ease;
+    }
 
-      #historie-content nav a:hover {
-        color: #111827; /* darker gray on hover */
-        border-left-color: #6b7280;
-        padding-left: 0.5rem;
-      }
+    #historie-content nav a:visited {
+      color: #374151;
+      /* same dark gray for visited */
+    }
 
-      #historie-content nav a.active {
-        color: #111827; /* darker gray for active */
-        border-left-color: #374151;
-        font-weight: 600;
-        padding-left: 0.5rem;
-      }
+    #historie-content nav a:hover {
+      color: #111827;
+      /* darker gray on hover */
+      border-left-color: #6b7280;
+      padding-left: 0.5rem;
+    }
 
-      #historie-content nav a:focus {
-        outline: none;
-      }
+    #historie-content nav a.active {
+      color: #111827;
+      /* darker gray for active */
+      border-left-color: #374151;
+      font-weight: 600;
+      padding-left: 0.5rem;
+    }
 
-      /* Main timeline container */
-      #historie-content .flex-1 {
-        position: relative;
-        padding-left: 3rem;
-      }
+    #historie-content nav a:focus {
+      outline: none;
+    }
 
-      /* Continuous timeline border */
-      #historie-content .flex-1::before {
-        content: '';
-        position: absolute;
-        left: 0.5rem;
-        top: 30px;
-        bottom: 60px;
-        width: 3px;
-        background-color: #e9eaeb;
-        z-index: 1;
-      }
+    /* Main timeline container */
+    #historie-content .flex-1 {
+      position: relative;
+      padding-left: 3rem;
+    }
 
-      #historie-content section {
-        position: relative;
-        margin-bottom: 3rem;
-      }
+    /* Continuous timeline border */
+    #historie-content .flex-1::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 30px;
+      bottom: 60px;
+      width: 3px;
+      background-color: #e9eaeb;
+      z-index: 1;
+    }
 
-      #historie-content section h2 {
-        position: relative;
-        margin-bottom: 1.5rem;
-      }
+    #historie-content section {
+      position: relative;
+      margin-bottom: 3rem;
+    }
 
-      /* Timeline dots for main section titles */
-      #historie-content section h2::before {
-        content: '';
-        position: absolute;
-        left: -2.9rem;
-        top: 1rem;
-        width: 16px;
-        height: 16px;
-        background-color: white;
-        border: 3px solid #374151;
-        border-radius: 50%;
-        box-shadow: 0 0 0 6px white;
-        z-index: 10;
-      }
+    #historie-content section h2 {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
 
-      #historie-content h4 {
-        color: #374151; /* darker gray for year subtitles */
-        margin-bottom: 0.25rem; /* reduced spacing after year titles */
-        margin-top: 1.5rem; /* spacing before each year section */
-      }
+    /* Timeline dots for main section titles */
+    #historie-content section h2::before {
+      content: '';
+      position: absolute;
+      left: -2.9rem;
+      top: 1rem;
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      border: 3px solid #374151;
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px white;
+      z-index: 10;
+    }
 
-      #historie-content h4:first-child {
-        margin-top: 0; /* no top margin for first year */
-      }
+    #historie-content h4 {
+      color: #374151;
+      /* darker gray for year subtitles */
+      margin-bottom: 0.25rem;
+      /* reduced spacing after year titles */
+      margin-top: 1.5rem;
+      /* spacing before each year section */
+    }
 
-    </style>
-  </head>
-  <body class="no-paragraph-margin">
-    <div id="navigation" data-page="historie.html" data-theme="dark"></div>
+    #historie-content h4:first-child {
+      margin-top: 0;
+      /* no top margin for first year */
+    }
+  </style>
+</head>
 
-    <section id="historie-content">
-      <!-- Content will be dynamically loaded here -->
-    </section>
+<body class="no-paragraph-margin">
+  <div id="navigation" data-page="historie.html" data-theme="dark"></div>
 
-    <script src="assets/js/navigation.js"></script>
-    <script src="data/historie-data.js"></script>
-    <script>
-      function renderHistorie() {
-        const container = document.getElementById('historie-content');
+  <section id="historie-content">
+    <!-- Content will be dynamically loaded here -->
+  </section>
 
-        function renderNavigation() {
-          return HISTORIE_DATA.navigation.map((navItem, index) => `
+  <script src="assets/js/navigation.js"></script>
+  <script src="data/historie-data.js"></script>
+  <script>
+    function renderHistorie() {
+      const container = document.getElementById('historie-content');
+
+      function renderNavigation() {
+        return HISTORIE_DATA.navigation.map((navItem, index) => `
             <a href="${navItem.href}" ${index === 0 ? 'class="active"' : ''}>
               ${navItem.label}
             </a>
           `).join('');
+      }
+
+      function renderSectionDescription(section) {
+        let html = '';
+
+        // Special handling for 'unsorted' section - Column Stack (Masonry effect)
+        if (section.id === 'unsorted') {
+          if (section.content.description) {
+            html += section.content.description.map(paragraph => `<p class="mb-4">${paragraph}</p>`).join('');
+          }
+          // Use CSS columns to stack images vertically in columns
+          html += '<div class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 mt-4">';
+          html += renderSectionImages(section, 'columns');
+          html += '</div>';
+          return html;
         }
 
-        function renderSectionDescription(section) {
-          let html = '';
+        // Standard sections
+        if (section.content.description) {
+          const useGrid = section.images && section.images.length > 2;
 
-          // If there's descriptive content, integrate images into it for text flow
-          if (section.content.description) {
+          if (useGrid) {
+            // Grid Layout for > 2 images
+            html += '<div class="description-container">';
+            html += '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">';
+            html += renderSectionImages(section, true);
+            html += '</div>';
+            html += section.content.description.map(paragraph =>
+              `<p class="mb-2">${paragraph}</p>`
+            ).join('');
+            html += '</div>';
+          } else {
+            // Floating Layout for <= 2 images
             html += '<div class="description-with-images">';
-            html += renderSectionImages(section);
+            html += renderSectionImages(section, false);
             html += section.content.description.map(paragraph =>
               `<p>${paragraph}</p>`
             ).join('');
             html += '</div>';
           }
-
-          return html;
         }
 
-        function renderImagesRow(section) {
-          // If no description, render images as a flex row
-          if (!section.content.description && section.images.length > 0) {
-            return `<div class="images-row">${renderSectionImages(section)}</div>`;
+        return html;
+      }
+
+      function renderImagesRow(section) {
+        // If no description, render images as a grid
+        if (!section.content.description && section.images.length > 0) {
+          return `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">${renderSectionImages(section, true)}</div>`;
+        }
+        return '';
+      }
+
+      function renderSectionTimeline(section) {
+        let html = '';
+
+        // Render timeline if present
+        if (section.content.timeline) {
+          section.content.timeline.forEach(timelineItem => {
+            html += `<h4>${timelineItem.year}</h4>`;
+            if (timelineItem.events.length === 1) {
+              html += `<p>${timelineItem.events[0]}</p>`;
+            } else {
+              html += timelineItem.events.map(event => {
+                if (event.includes('–') || event.includes('-')) {
+                  // Handle multi-part events with dates
+                  return `<p><strong>${event.split(' ')[0]}</strong> ${event.substring(event.indexOf(' ') + 1)}</p>`;
+                } else {
+                  return `<p>${event}</p>`;
+                }
+              }).join('');
+            }
+          });
+        }
+
+        // Render additional info if present
+        if (section.content.additionalInfo) {
+          html += section.content.additionalInfo.map(info =>
+            `<p>${info}</p>`
+          ).join('');
+        }
+
+        return html;
+      }
+
+      function renderSectionImages(section, layoutMode = 'floating') {
+        if (!section.images || section.images.length === 0) return '';
+
+        return section.images.map(image => {
+          if (layoutMode === 'columns') {
+            // Column Stack: Natural height, avoid break inside, bottom margin for spacing
+            return `
+                <figure class="break-inside-avoid mb-4 block">
+                  <img src="${image.src}" alt="${image.alt}" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-auto" loading="lazy" onerror="this.style.display='none'">
+                  <figcaption class="text-xs text-gray-500 mt-1 italic truncate">${image.caption || image.alt}</figcaption>
+                </figure>
+              `;
+          } else if (layoutMode === true || layoutMode === 'grid') {
+            // Grid: Fixed height cover
+            return `
+                <figure class="mb-0">
+                  <img src="${image.src}" alt="${image.alt}" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-64 object-cover" loading="lazy" onerror="this.style.display='none'">
+                  <figcaption class="text-sm text-gray-500 mt-2 italic">${image.caption || image.alt}</figcaption>
+                </figure>
+              `;
+          } else {
+            // Floating: Fixed width, auto height
+            return `
+                <figure class="mb-4 inline-block mr-4 align-top" style="max-width: 300px;">
+                  <img src="${image.src}" alt="${image.alt}" class="rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 w-full h-auto" loading="lazy" onerror="this.style.display='none'">
+                  <figcaption class="text-sm text-gray-500 mt-2 italic">${image.caption || image.alt}</figcaption>
+                </figure>
+              `;
           }
-          return '';
-        }
+        }).join('');
+      }
 
-        function renderSectionTimeline(section) {
-          let html = '';
-
-          // Render timeline if present
-          if (section.content.timeline) {
-            section.content.timeline.forEach(timelineItem => {
-              html += `<h4>${timelineItem.year}</h4>`;
-              if (timelineItem.events.length === 1) {
-                html += `<p>${timelineItem.events[0]}</p>`;
-              } else {
-                html += timelineItem.events.map(event => {
-                  if (event.includes('–') || event.includes('-')) {
-                    // Handle multi-part events with dates
-                    return `<p><strong>${event.split(' ')[0]}</strong> ${event.substring(event.indexOf(' ') + 1)}</p>`;
-                  } else {
-                    return `<p>${event}</p>`;
-                  }
-                }).join('');
-              }
-            });
-          }
-
-          // Render additional info if present
-          if (section.content.additionalInfo) {
-            html += section.content.additionalInfo.map(info =>
-              `<p>${info}</p>`
-            ).join('');
-          }
-
-          return html;
-        }
-
-        function renderSectionImages(section) {
-          // Images disabled for layout testing
-          /*
-          return section.images.map(image => `
-            <figure>
-              <img src="${image.src}" alt="${image.alt}" onerror="this.style.display='none'">
-              <figcaption><small>${image.caption}</small></figcaption>
-            </figure>
-          `).join('');
-          */
-          return '';
-        }
-
-        function renderSections() {
-          return HISTORIE_DATA.sections.map(section => `
+      function renderSections() {
+        return HISTORIE_DATA.sections.map(section => `
             <section id="${section.id}">
               <div>
                 <h2>${section.title}</h2>
@@ -195,9 +251,9 @@
               </div>
             </section>
           `).join('');
-        }
+      }
 
-        const html = `
+      const html = `
           <div class="wrapper">
             <!-- Page Title -->
             <div class="mb-8 pb-6">
@@ -229,61 +285,62 @@
           </div>
         `;
 
-        container.innerHTML = html;
+      container.innerHTML = html;
 
-        // Initialize scroll navigation after content is loaded
-        initializeScrollNavigation();
-      }
+      // Initialize scroll navigation after content is loaded
+      initializeScrollNavigation();
+    }
 
-      function initializeScrollNavigation() {
-        // Smooth scrolling for sidebar navigation links only
-        const navLinks = document.querySelectorAll('section nav a');
+    function initializeScrollNavigation() {
+      // Smooth scrolling for sidebar navigation links only
+      const navLinks = document.querySelectorAll('section nav a');
 
-        navLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
 
-            if (targetElement) {
-              targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
 
-              // Update active state
-              navLinks.forEach(l => {
-                l.classList.remove('active');
-              });
-              this.classList.add('active');
-            }
-          });
+            // Update active state
+            navLinks.forEach(l => {
+              l.classList.remove('active');
+            });
+            this.classList.add('active');
+          }
         });
+      });
 
-        // Highlight current section on scroll
-        window.addEventListener('scroll', function() {
-          const sections = document.querySelectorAll('section[id]');
-          const scrollPos = window.scrollY + 100;
+      // Highlight current section on scroll
+      window.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPos = window.scrollY + 100;
 
-          sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
 
-            if (scrollPos >= top && scrollPos < top + height) {
-              navLinks.forEach(l => {
-                l.classList.remove('active');
-              });
-              const activeLink = document.querySelector(`a[href="#${id}"]`);
-              if (activeLink) {
-                activeLink.classList.add('active');
-              }
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach(l => {
+              l.classList.remove('active');
+            });
+            const activeLink = document.querySelector(`a[href="#${id}"]`);
+            if (activeLink) {
+              activeLink.classList.add('active');
             }
-          });
+          }
         });
-      }
+      });
+    }
 
-      document.addEventListener('DOMContentLoaded', renderHistorie);
-    </script>
-  </body>
+    document.addEventListener('DOMContentLoaded', renderHistorie);
+  </script>
+</body>
+
 </html>

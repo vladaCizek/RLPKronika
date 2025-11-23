@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .image-container {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+            vertical-align: top;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+
+        .filename {
+            font-size: 12px;
+            word-break: break-all;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>History Images</h1>
+    <div id="images"></div>
+    <script>
+        const images = [
+            "image1.jpeg", "image10.jpeg", "image11.jpeg", "image12.jpeg", "image13.jpeg", "image14.jpeg", "image15.jpeg", "image16.jpeg", "image17.jpeg", "image18.png", "image19.png", "image2.jpeg", "image20.png", "image21.jpeg", "image22.jpeg", "image23.jpeg", "image24.jpeg", "image25.jpeg", "image26.jpeg", "image27.jpeg", "image28.jpeg", "image29.jpeg", "image3.png", "image30.jpeg", "image31.jpeg", "image32.jpeg", "image33.jpeg", "image34.jpeg", "image35.jpeg", "image36.jpeg", "image37.jpeg", "image38.jpeg", "image39.jpeg", "image4.jpeg", "image40.jpeg", "image41.jpeg", "image42.jpeg", "image43.jpeg", "image44.jpeg", "image45.jpeg", "image46.jpeg", "image47.jpeg", "image48.jpeg", "image49.jpeg", "image5.jpeg", "image50.jpeg", "image51.jpeg", "image52.jpeg", "image53.jpeg", "image6.jpeg", "image7.jpeg", "image8.jpeg", "image9.jpeg"
+        ];
+        const container = document.getElementById('images');
+        images.forEach(img => {
+            const div = document.createElement('div');
+            div.className = 'image-container';
+            div.innerHTML = `<img src="assets/images/historie/${img}" loading="lazy"><div class="filename">${img}</div>`;
+            container.appendChild(div);
+        });
+    </script>
+</body>
+
+</html>

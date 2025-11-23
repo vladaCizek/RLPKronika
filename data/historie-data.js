@@ -13,7 +13,8 @@ const HISTORIE_DATA = {
     { id: 'periode-1990-1999', label: '1990-1999: Transformace', href: '#periode-1990-1999' },
     { id: 'periode-2000-2009', label: '2000-2009: Modernizace', href: '#periode-2000-2009' },
     { id: 'periode-2010-2019', label: '2010-2019: Velké změny', href: '#periode-2010-2019' },
-    { id: 'periode-2020-2026', label: '2020-2026: Současnost', href: '#periode-2020-2026' }
+    { id: 'periode-2020-2026', label: '2020-2026: Současnost', href: '#periode-2020-2026' },
+    { id: 'unsorted', label: 'Nezařazené', href: '#unsorted' }
   ],
 
   // All historical sections in chronological order
@@ -434,6 +435,52 @@ const HISTORIE_DATA = {
           alt: 'Výstavba cargo terminálu',
           caption: 'Výstavba letištního cargoterminálu'
         }
+      ]
+    },
+    // Unsorted Images - Temporary Section
+    {
+      id: 'unsorted',
+      title: 'Nezařazené fotografie',
+      period: '???',
+      content: {
+        description: [
+          'Fotografie, které zatím nebyly zařazeny do konkrétního historického období. Prosím o pomoc s identifikací.'
+        ]
+      },
+      images: [
+        { src: 'assets/images/historie/image21.jpeg', alt: 'image21', caption: 'image21' },
+        { src: 'assets/images/historie/image22.jpeg', alt: 'image22', caption: 'image22' },
+        { src: 'assets/images/historie/image23.jpeg', alt: 'image23', caption: 'image23' },
+        { src: 'assets/images/historie/image24.jpeg', alt: 'image24', caption: 'image24' },
+        { src: 'assets/images/historie/image25.jpeg', alt: 'image25', caption: 'image25' },
+        { src: 'assets/images/historie/image26.jpeg', alt: 'image26', caption: 'image26' },
+        { src: 'assets/images/historie/image27.jpeg', alt: 'image27', caption: 'image27' },
+        { src: 'assets/images/historie/image28.jpeg', alt: 'image28', caption: 'image28' },
+        { src: 'assets/images/historie/image29.jpeg', alt: 'image29', caption: 'image29' },
+        { src: 'assets/images/historie/image30.jpeg', alt: 'image30', caption: 'image30' },
+        { src: 'assets/images/historie/image31.jpeg', alt: 'image31', caption: 'image31' },
+        { src: 'assets/images/historie/image32.jpeg', alt: 'image32', caption: 'image32' },
+        { src: 'assets/images/historie/image33.jpeg', alt: 'image33', caption: 'image33' },
+        { src: 'assets/images/historie/image34.jpeg', alt: 'image34', caption: 'image34' },
+        { src: 'assets/images/historie/image35.jpeg', alt: 'image35', caption: 'image35' },
+        { src: 'assets/images/historie/image36.jpeg', alt: 'image36', caption: 'image36' },
+        { src: 'assets/images/historie/image37.jpeg', alt: 'image37', caption: 'image37' },
+        { src: 'assets/images/historie/image38.jpeg', alt: 'image38', caption: 'image38' },
+        { src: 'assets/images/historie/image39.jpeg', alt: 'image39', caption: 'image39' },
+        { src: 'assets/images/historie/image40.jpeg', alt: 'image40', caption: 'image40' },
+        { src: 'assets/images/historie/image41.jpeg', alt: 'image41', caption: 'image41' },
+        { src: 'assets/images/historie/image42.jpeg', alt: 'image42', caption: 'image42' },
+        { src: 'assets/images/historie/image43.jpeg', alt: 'image43', caption: 'image43' },
+        { src: 'assets/images/historie/image44.jpeg', alt: 'image44', caption: 'image44' },
+        { src: 'assets/images/historie/image45.jpeg', alt: 'image45', caption: 'image45' },
+        { src: 'assets/images/historie/image46.jpeg', alt: 'image46', caption: 'image46' },
+        { src: 'assets/images/historie/image47.jpeg', alt: 'image47', caption: 'image47' },
+        { src: 'assets/images/historie/image48.jpeg', alt: 'image48', caption: 'image48' },
+        { src: 'assets/images/historie/image49.jpeg', alt: 'image49', caption: 'image49' },
+        { src: 'assets/images/historie/image50.jpeg', alt: 'image50', caption: 'image50' },
+        { src: 'assets/images/historie/image51.jpeg', alt: 'image51', caption: 'image51' },
+        { src: 'assets/images/historie/image52.jpeg', alt: 'image52', caption: 'image52' },
+        { src: 'assets/images/historie/image53.jpeg', alt: 'image53', caption: 'image53' }
       ]
     }
   ]
