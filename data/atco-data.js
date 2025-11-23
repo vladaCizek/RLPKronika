@@ -646,7 +646,7 @@ const bioData = [
       { "BO": "29.3.1989" }
     ],
     info: "Vedoucí stanoviště: 1.4.1992 – 1993. Odešel po dohodě v r. 1999 na APP/TWR Praha",
-    image: "assets/images/atco/Sekyra_Jiri.jpg",
+    image: "assets/images/atco/Sekera_Jiri.jpg",
     imageDescription: "Jiří Sekyra"
   },
   {
@@ -669,8 +669,8 @@ const bioData = [
       { "BO": "25.4.1989" }
     ],
     info: "Odešel po dohodě v r. 1990 do Holešova a v r. 1994 do Prahy na TWR/APP",
-    image: "",
-    imageDescription: ""
+    image: "assets/images/atco/Hanak_Drahomir.jpg",
+    imageDescription: "Drahomír Hanák"
   },
   {
     bio: {
@@ -693,8 +693,8 @@ const bioData = [
       { "OJTI": "19.8.2004" }
     ],
     info: "",
-    image: "",
-    imageDescription: ""
+    image: "assets/images/atco/Jurasz_Petr.jpg",
+    imageDescription: "Petr Jurasz"
   },
   {
     bio: {
@@ -767,8 +767,8 @@ const bioData = [
       { "Instruktor": "7.2.2007" }
     ],
     info: "",
-    image: "",
-    imageDescription: ""
+    image: "assets/images/atco/Kozusnik_Martin.jpg",
+    imageDescription: "Martin Kožušník"
   },
   {
     bio: {
@@ -839,8 +839,8 @@ const bioData = [
       { "SC LKTB": "6/2013" }
     ],
     info: "Odchod do Brna 1.10.2007. Předseda CZATCA LKTB 11/2010. Člen výkonné rady CZATCA za regionální letiště od 11/2013. Průkaz PPL, ULL, s paraglidem; MTB",
-    image: "",
-    imageDescription: ""
+    image: "assets/images/atco/Novozamsky_Vitezslav.png",
+    imageDescription: "Vít Novozámský"
   },
   {
     bio: {
@@ -879,8 +879,8 @@ const bioData = [
     },
     instruktor: [],
     info: "Nástup 1.2.2004 pro ACC Praha, konec 2005, poté lektor na Letecké škole, návrat do výcviku 1.6.2007 pro TWR/APP LKMT. Vedoucí LWS LKMT, 1.6.2016 vedoucí výcviku ckmt",
-    image: "assets/images/atco/Vojna_Vaclav_portrait.jpg",
-    imageDescription: ""
+    image: "assets/images/atco/Vojna_Vaclav.jpg",
+    imageDescription: "Václav Vojna"
   },
   {
     bio: {
@@ -902,7 +902,7 @@ const bioData = [
       { "SC": "12/2012" }
     ],
     info: "",
-     image: "assets/images/atco/Koval_Ian.png",
+    image: "assets/images/atco/Koval_Ian.png",
     imageDescription: ""
   },
   {
@@ -928,7 +928,7 @@ const bioData = [
       { "ASAE SeOC": "31.1.21" }
     ],
     info: "",
-    image: "assets/images/atco/Klumpler_Martin_portrait.jpg",
+    image: "assets/images/atco/Klumpler_Martin.jpg",
     imageDescription: "Martin Klumpler"
   },
   {
@@ -948,8 +948,8 @@ const bioData = [
     },
     instruktor: [],
     info: "",
-    image: "",
-    imageDescription: ""
+    image: "assets/images/atco/Wzatek_Ondrej.jpg",
+    imageDescription: "Ondřej Wzatek"
   },
   {
     bio: {
@@ -968,8 +968,8 @@ const bioData = [
     },
     instruktor: [],
     info: "Nástup 1.2.2005 pro ACC Praha, konec 2006, návrat do výcviku 1.6.2007 pro TWR/APP LKMT",
-    image: "assets/images/atco/Nahlovsky_Jiri_portrait.jpg",
-    imageDescription: ""
+    image: "assets/images/atco/Nahlovsky_Jiri.jpg",
+    imageDescription: "Jiří Náhlovský"
   },
   {
     bio: {
@@ -1070,8 +1070,8 @@ const bioData = [
       { "OJTI/STDI": "1.4.2018" }
     ],
     info: "Pilot PPL, IFR pilot od 2015, ATPL",
-    image: "",
-    imageDescription: ""
+    image: "assets/images/atco/Jiricny_Rostislav.jpg",
+    imageDescription: "Rostislav Jiříčný"
   },
   {
     bio: {
@@ -1106,7 +1106,7 @@ const bioData = [
       { "DOT/STDI": "5/2020" }
     ],
     info: "Nástup 1.9.2012 pro ACC, později APP/TWR LKMT. V zácviku na stanovišti od 1.7.2015. Pilot PPL + SE a ME endorsement. ATPL ADO/APT LKMT kkkm. SCB CJJ 29.4.2020",
-    image: "",
-    imageDescription: ""
+    image: "assets/images/atco/Obrovsky_Stepan.jpg",
+    imageDescription: "Štěpán Obrovský"
   }
 ];

@@ -100,6 +100,8 @@ const bioData = [
     additionalInfo: [
       "V r. 1993 odchod na mateřskou dovolenou 1997 rozvázání pracovního poměru z důvodu prodloužení mateřské dovolené 11.9.2000 nastoupila zpět k ŘLP ČR do administrativy jako referent ISQMS.",
     ],
+    image: "assets/images/bo/Moravcova_Kamila.jpg",
+    imageDescription: "Kamila Moravcová"
   },
   {
     name: "Klásková Ludmila (dříve Malchárková)",
@@ -108,6 +110,8 @@ const bioData = [
     licenseBO: "28.6.1976",
     additionalInfo: ["AO: 15.4.2004"],
     departure: "30.6.2016 důchod",
+    image: "assets/images/bo/Klaskova_Ludmila.jpg",
+    imageDescription: "Ludmila Klásková"
   },
   {
     name: "Malchárková Eva (dříve Foerchgottová)",
@@ -145,7 +149,7 @@ const bioData = [
       "ASO: 4.5.2005",
       "Od 1.7. ADO LKPR",
     ],
-    image: "assets/images/bo/Mazumderova_Irena_portret.jpg",
+    image: "assets/images/bo/Mazumderova_Irena_2.jpg",
   },
   {
     name: "Hloušková Renata",
