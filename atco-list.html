@@ -1,122 +1,135 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="assets/css/overflow.css" />
-    <title>ATCO List - Řízení Letového Provozu Ostrava</title>
-    <style>
-      /* Navigation styling */
-      #atco-content nav a {
-        color: #374151; /* dark gray */
-        text-decoration: none;
-        display: block;
-        padding: 0.25rem 0;
-        border-left: 3px solid transparent;
-        transition: all 0.2s ease;
-      }
 
-      #atco-content nav a:visited {
-        color: #374151; /* same dark gray for visited */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/overflow.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <title>ATCO List - Řízení Letového Provozu Ostrava</title>
+  <style>
+    /* Navigation styling */
+    #atco-content nav a {
+      color: #374151;
+      /* dark gray */
+      text-decoration: none;
+      display: block;
+      padding: 0.25rem 0;
+      border-left: 3px solid transparent;
+      transition: all 0.2s ease;
+    }
 
-      #atco-content nav a:hover {
-        color: #111827; /* darker gray on hover */
-        border-left-color: #6b7280;
-        padding-left: 0.5rem;
-      }
+    #atco-content nav a:visited {
+      color: #374151;
+      /* same dark gray for visited */
+    }
 
-      #atco-content nav a.active {
-        color: #111827; /* darker gray for active */
-        border-left-color: #374151;
-        font-weight: 600;
-        padding-left: 0.5rem;
-      }
+    #atco-content nav a:hover {
+      color: #111827;
+      /* darker gray on hover */
+      border-left-color: #6b7280;
+      padding-left: 0.5rem;
+    }
 
-      #atco-content nav a:focus {
-        outline: none;
-      }
+    #atco-content nav a.active {
+      color: #111827;
+      /* darker gray for active */
+      border-left-color: #374151;
+      font-weight: 600;
+      padding-left: 0.5rem;
+    }
 
-      /* Main content area */
-      #atco-content > .wrapper > .flex > .flex-1 {
-        position: relative;
-        padding-left: 3rem;
-      }
+    #atco-content nav a:focus {
+      outline: none;
+    }
 
-      /* Continuous timeline border */
-      #atco-content > .wrapper > .flex > .flex-1::before {
-        content: '';   
-        position: absolute;
-        left: 0.5rem;
-        top: 30px;
-        bottom: 60px;
-        width: 3px;
-        background-color: #e9eaeb;
-        z-index: 1;
-      }
+    /* Main content area */
+    #atco-content>.wrapper>.flex>.flex-1 {
+      position: relative;
+      padding-left: 3rem;
+    }
 
-      #atco-content section {
-        position: relative;
-        margin-bottom: 3rem;
-      }
+    /* Continuous timeline border */
+    #atco-content>.wrapper>.flex>.flex-1::before {
+      content: '';
+      position: absolute;
+      left: 0.5rem;
+      top: 30px;
+      bottom: 60px;
+      width: 3px;
+      background-color: #e9eaeb;
+      z-index: 1;
+    }
 
-      #atco-content section h2 {
-        position: relative;
-        margin-bottom: 1.5rem;
-      }
+    #atco-content section {
+      position: relative;
+      margin-bottom: 3rem;
+    }
 
-      /* Timeline dots for main section titles */
-      #atco-content section h2::before {
-        content: '';
-        position: absolute;
-        left: -2.9rem;
-        top: 1rem;
-        width: 16px;
-        height: 16px;
-        background-color: white;
-        border: 3px solid #374151;
-        border-radius: 50%;
-        box-shadow: 0 0 0 6px white;
-        z-index: 10;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="navigation" data-page="atco-list.html" data-theme="dark"></div>
+    #atco-content section h2 {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Timeline dots for main section titles */
+    #atco-content section h2::before {
+      content: '';
+      position: absolute;
+      left: -2.9rem;
+      top: 1rem;
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      border: 3px solid #374151;
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px white;
+      z-index: 10;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navigation" data-page="atco-list.html" data-theme="dark"></div>
+
+  <main class="container mx-auto px-4 py-8 max-w-6xl">
+
+
 
     <section id="atco-content">
       <!-- Content will be dynamically loaded here -->
     </section>
 
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/image-handler.js"></script>
-    <script src="data/atco-data.js"></script>
-    <script>
-      // Bio component class
-      class BioComponent {
-        constructor(data) {
-          this.data = data;
+  </main>
+
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/image-handler.js"></script>
+  <script src="data/atco-data.js"></script>
+  <script>
+    // Bio component class
+    class BioComponent {
+      constructor(data) {
+        this.data = data;
+      }
+
+      render() {
+        const bioCard = document.createElement("div");
+        bioCard.className = "p-4 mb-4 pb-6 border-b-4 border-gray-200";
+
+        // Create image container using ImageHandler
+        const imageHandler = new ImageHandler(
+          this.data.image,
+          this.data.imageDescription || this.data.bio.name
+        );
+        const imageContainer = imageHandler.createImageContainer();
+        imageContainer.className = "flex justify-center items-center w-20 h-20 rounded bg-gray-200";
+
+        const imgElement = imageContainer.querySelector('img');
+        if (imgElement) {
+          imgElement.className = "object-contain rounded";
         }
 
-        render() {
-          const bioCard = document.createElement("div");
-          bioCard.className = "p-4 mb-4 pb-6 border-b-4 border-gray-200";
-
-          // Create image container using ImageHandler
-          const imageHandler = new ImageHandler(
-            this.data.image,
-            this.data.imageDescription || this.data.bio.name
-          );
-          const imageContainer = imageHandler.createImageContainer();
-          imageContainer.className = "flex justify-center items-center w-20 h-20 rounded bg-gray-200";
-
-          const imgElement = imageContainer.querySelector('img');
-          if (imgElement) {
-            imgElement.className = "object-contain rounded";
-          }
-
-          bioCard.innerHTML = `
+        bioCard.innerHTML = `
             <!-- First row: Name and dates -->
             <div class="mb-3 pb-2 border-b border-gray-200">
               <h3 class="text-lg font-bold text-gray-700 mb-0">${this.data.bio.name} <span class="text-base font-normal text-gray-500 ml-3" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">${this.formatDates()}</span></h3>
@@ -136,27 +149,27 @@
             </div>
           `;
 
-          return bioCard;
+        return bioCard;
+      }
+
+      formatDates() {
+        let dates = '';
+        if (this.data.bio.dob) {
+          dates += `*${this.data.bio.dob}`;
         }
-
-        formatDates() {
-          let dates = '';
-          if (this.data.bio.dob) {
-            dates += `*${this.data.bio.dob}`;
+        if (this.data.bio.dod) {
+          // Only show death info if it's an actual date, not just a symbol
+          if (this.data.bio.dod !== '†') {
+            dates += `<span style="margin: 0 12px;">•</span>+${this.data.bio.dod}`;
           }
-          if (this.data.bio.dod) {
-            // Only show death info if it's an actual date, not just a symbol
-            if (this.data.bio.dod !== '†') {
-              dates += `<span style="margin: 0 12px;">•</span>+${this.data.bio.dod}`;
-            }
-          }
-          return dates;
         }
+        return dates;
+      }
 
-        formatBasicInfo() {
-          if (!this.data.bio.nastup && !this.data.bio.odchod) return '';
+      formatBasicInfo() {
+        if (!this.data.bio.nastup && !this.data.bio.odchod) return '';
 
-          return `
+        return `
             <div class="bio-section basic-info">
               <div class="bio-section-content">
                 ${this.data.bio.nastup ? `<p class="mb-0"><span class="font-semibold text-gray-700">Nástup:</span> ${this.data.bio.nastup}</p>` : ''}
@@ -164,141 +177,144 @@
               </div>
             </div>
           `;
-        }
+      }
 
-        formatLicences() {
-          if (!this.data.licence.licences || this.data.licence.licences.length === 0) return '';
+      formatLicences() {
+        if (!this.data.licence.licences || this.data.licence.licences.length === 0) return '';
 
-          let licenceContent = '';
-          this.data.licence.licences.forEach(licence => {
-            for (const [key, value] of Object.entries(licence)) {
-              licenceContent += `<p class="mb-0"><span class="font-semibold text-gray-700">${key}:</span> ${value}</p>`;
-            }
-          });
+        let licenceContent = '';
+        this.data.licence.licences.forEach(licence => {
+          for (const [key, value] of Object.entries(licence)) {
+            licenceContent += `<p class="mb-0"><span class="font-semibold text-gray-700">${key}:</span> ${value}</p>`;
+          }
+        });
 
-          return `
+        return `
             <div class="bio-section licences">
               <div class="bio-section-content">
                 ${licenceContent}
               </div>
             </div>
           `;
-        }
+      }
 
-        formatInstruktorInfo() {
-          if (!this.data.instruktor || this.data.instruktor.length === 0) return '';
+      formatInstruktorInfo() {
+        if (!this.data.instruktor || this.data.instruktor.length === 0) return '';
 
-          let instruktorContent = '';
-          this.data.instruktor.forEach(inst => {
-            for (const [key, value] of Object.entries(inst)) {
-              instruktorContent += `<p class="mb-0"><span class="font-semibold text-gray-700">${key}:</span> ${value}</p>`;
-            }
-          });
+        let instruktorContent = '';
+        this.data.instruktor.forEach(inst => {
+          for (const [key, value] of Object.entries(inst)) {
+            instruktorContent += `<p class="mb-0"><span class="font-semibold text-gray-700">${key}:</span> ${value}</p>`;
+          }
+        });
 
-          return `
+        return `
             <div>
               ${instruktorContent}
             </div>
           `;
-        }
+      }
 
-        formatAdditionalInfo() {
-          if (!this.data.info) return '';
+      formatAdditionalInfo() {
+        if (!this.data.info) return '';
 
-          return `
+        return `
             <div>
               <p class="mb-0 text-gray-800">${this.data.info}</p>
             </div>
           `;
-        }
       }
+    }
 
-      // Navigation data for ATCO sections
-      const ATCO_NAVIGATION = [
-        { href: "#generation-1950s", label: "50. léta" },
-        { href: "#generation-1960s", label: "60. léta" },
-        { href: "#generation-1970s", label: "70. léta" },
-        { href: "#generation-1980s", label: "80. léta" },
-        { href: "#generation-1990s", label: "90. léta" },
-        { href: "#generation-2000s", label: "2000+" }
-      ];
+    // Navigation data for ATCO sections
+    const ATCO_NAVIGATION = [
+      { href: "#generation-1950s", label: "50. léta" },
+      { href: "#generation-1960s", label: "60. léta" },
+      { href: "#generation-1970s", label: "70. léta" },
+      { href: "#generation-1980s", label: "80. léta" },
+      { href: "#generation-1990s", label: "90. léta" },
+      { href: "#generation-2000s", label: "2000+" }
+    ];
 
-      // Organize bio data by decades based on entry date
-      function organizeBioDataByDecades() {
-        const sections = {
-          "generation-1950s": { title: "50. léta", id: "generation-1950s", data: [] },
-          "generation-1960s": { title: "60. léta", id: "generation-1960s", data: [] },
-          "generation-1970s": { title: "70. léta", id: "generation-1970s", data: [] },
-          "generation-1980s": { title: "80. léta", id: "generation-1980s", data: [] },
-          "generation-1990s": { title: "90. léta", id: "generation-1990s", data: [] },
-          "generation-2000s": { title: "2000+", id: "generation-2000s", data: [] }
-        };
+    // Organize bio data by decades based on entry date
+    function organizeBioDataByDecades() {
+      const sections = {
+        "generation-1950s": { title: "50. léta", id: "generation-1950s", data: [] },
+        "generation-1960s": { title: "60. léta", id: "generation-1960s", data: [] },
+        "generation-1970s": { title: "70. léta", id: "generation-1970s", data: [] },
+        "generation-1980s": { title: "80. léta", id: "generation-1980s", data: [] },
+        "generation-1990s": { title: "90. léta", id: "generation-1990s", data: [] },
+        "generation-2000s": { title: "2000+", id: "generation-2000s", data: [] }
+      };
 
-        bioData.forEach(person => {
-          const entryYear = person.bio.nastup;
-          if (entryYear) {
-            // Extract year from various date formats
-            const yearMatch = entryYear.match(/\d{4}/);
-            if (yearMatch) {
-              const year = parseInt(yearMatch[0]);
-              if (year >= 1950 && year < 1960) {
-                sections["generation-1950s"].data.push(person);
-              } else if (year >= 1960 && year < 1970) {
-                sections["generation-1960s"].data.push(person);
-              } else if (year >= 1970 && year < 1980) {
-                sections["generation-1970s"].data.push(person);
-              } else if (year >= 1980 && year < 1990) {
-                sections["generation-1980s"].data.push(person);
-              } else if (year >= 1990 && year < 2000) {
-                sections["generation-1990s"].data.push(person);
-              } else if (year >= 2000) {
-                sections["generation-2000s"].data.push(person);
-              }
+      bioData.forEach(person => {
+        const entryYear = person.bio.nastup;
+        if (entryYear) {
+          // Extract year from various date formats
+          const yearMatch = entryYear.match(/\d{4}/);
+          if (yearMatch) {
+            const year = parseInt(yearMatch[0]);
+            if (year >= 1950 && year < 1960) {
+              sections["generation-1950s"].data.push(person);
+            } else if (year >= 1960 && year < 1970) {
+              sections["generation-1960s"].data.push(person);
+            } else if (year >= 1970 && year < 1980) {
+              sections["generation-1970s"].data.push(person);
+            } else if (year >= 1980 && year < 1990) {
+              sections["generation-1980s"].data.push(person);
+            } else if (year >= 1990 && year < 2000) {
+              sections["generation-1990s"].data.push(person);
+            } else if (year >= 2000) {
+              sections["generation-2000s"].data.push(person);
             }
           }
-        });
+        }
+      });
 
-        return Object.values(sections).filter(section => section.data.length > 0);
-      }
+      return Object.values(sections).filter(section => section.data.length > 0);
+    }
 
-      function renderNavigation() {
-        return ATCO_NAVIGATION.map((navItem, index) => `
+    function renderNavigation() {
+      return ATCO_NAVIGATION.map((navItem, index) => `
           <a href="${navItem.href}" ${index === 0 ? 'class="active"' : ''}>
             ${navItem.label}
           </a>
         `).join('');
-      }
+    }
 
-      function renderSections() {
-        const sections = organizeBioDataByDecades();
+    function renderSections() {
+      const sections = organizeBioDataByDecades();
 
-        return sections.map(section => `
+      return sections.map(section => `
           <section id="${section.id}">
             <div>
               <h2>${section.title}</h2>
               <div class="bio-list">
                 ${section.data.map(person => {
-                  const bio = new BioComponent(person);
-                  return bio.render().outerHTML;
-                }).join('')}
+        const bio = new BioComponent(person);
+        return bio.render().outerHTML;
+      }).join('')}
               </div>
             </div>
           </section>
         `).join('');
-      }
+    }
 
-      function renderATCOList() {
-        const container = document.getElementById('atco-content');
+    function renderATCOList() {
+      const container = document.getElementById('atco-content');
 
-        const html = `
+      const html = `
           <div class="wrapper">
-            <!-- Page Title -->
-            <div class="mb-8 pb-6">
-              <h1>ATCO List</h1>
-              <p>Seznam řídících letového provozu (Air Traffic Control Officers) působících na letišti Ostrava.</p>
+            <!-- Hero Section -->
+            <div class="hero-section" style="background-image: url('assets/images/spolecne/IMG_1451.JPG');">
+              <div class="hero-overlay"></div>
+              <div class="hero-content">
+                <h1 class="hero-title">Seznam ATCO</h1>
+                <p class="hero-subtitle">Řídící letového provozu</p>
+              </div>
             </div>
 
-            <div class="flex gap-8">
+            <div class="flex gap-8 mt-8">
               <!-- Sidebar Navigation -->
               <div class="w-64 flex-none">
                 <div class="sticky top-0" style="position: sticky; top: 1rem;">
@@ -322,62 +338,63 @@
           </div>
         `;
 
-        container.innerHTML = html;
+      container.innerHTML = html;
 
-        // Initialize scroll navigation after content is loaded
-        initializeScrollNavigation();
-      }
+      // Initialize scroll navigation after content is loaded
+      initializeScrollNavigation();
+    }
 
-      function initializeScrollNavigation() {
-        // Smooth scrolling for sidebar navigation links only
-        const navLinks = document.querySelectorAll('section nav a');
+    function initializeScrollNavigation() {
+      // Smooth scrolling for sidebar navigation links only
+      const navLinks = document.querySelectorAll('section nav a');
 
-        navLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
+      navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
 
-            if (targetElement) {
-              targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
 
-              // Update active state
-              navLinks.forEach(l => {
-                l.classList.remove('active');
-              });
-              this.classList.add('active');
-            }
-          });
+            // Update active state
+            navLinks.forEach(l => {
+              l.classList.remove('active');
+            });
+            this.classList.add('active');
+          }
         });
+      });
 
-        // Highlight current section on scroll
-        window.addEventListener('scroll', function() {
-          const sections = document.querySelectorAll('section[id]');
-          const scrollPos = window.scrollY + 100;
+      // Highlight current section on scroll
+      window.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPos = window.scrollY + 100;
 
-          sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
+        sections.forEach(section => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          const id = section.getAttribute('id');
 
-            if (scrollPos >= top && scrollPos < top + height) {
-              navLinks.forEach(l => {
-                l.classList.remove('active');
-              });
-              const activeLink = document.querySelector(`a[href="#${id}"]`);
-              if (activeLink) {
-                activeLink.classList.add('active');
-              }
+          if (scrollPos >= top && scrollPos < top + height) {
+            navLinks.forEach(l => {
+              l.classList.remove('active');
+            });
+            const activeLink = document.querySelector(`a[href="#${id}"]`);
+            if (activeLink) {
+              activeLink.classList.add('active');
             }
-          });
+          }
         });
-      }
+      });
+    }
 
-      // Initialize when page loads
-      document.addEventListener('DOMContentLoaded', renderATCOList);
-    </script>
-  </body>
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', renderATCOList);
+  </script>
+</body>
+
 </html>
